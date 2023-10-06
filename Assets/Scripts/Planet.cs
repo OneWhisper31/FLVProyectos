@@ -2,78 +2,106 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
-using System.Linq;
-using Random = UnityEngine.Random;
 
 public class Planet : MonoBehaviour
 {
-    [SerializeField] Image image;
-
-
     [SerializeField] Transform[] posibleSpawns;
-
-    [SerializeField] int deg;//Debugmode
-
     [SerializeField] Building building;
 
-    [SerializeField] List<Building> buildings;
+    [Header("Debug Mode")]
+    [SerializeField] bool debugMode;
+    [Range(0,360)] [SerializeField] int degrees;//Debugmode
 
-    [SerializeField] bool gizmos;
-
-    [SerializeField] Range[] avoidRanges;
-
+    Image image;
 
     private void Start()
     {
-        //StartCoroutine(_update());
+        image = GetComponent<Image>();
+
         foreach (var item in posibleSpawns)
         {
             var obj = Instantiate(building, item.transform.position, Quaternion.identity, this.transform);
             obj.transform.up = item.transform.position - transform.position;
-            obj.planet = this;
-
-
-            buildings.Add(obj);
         }
     }
     private void Update()
     {
-        transform.Rotate(Vector3.forward*0.05f);
+        transform.Rotate(Vector3.forward * 0.02f);
     }
-    IEnumerator _update()
+
+    private void OnDrawGizmos()
     {
-        while (true)
-        {
-            var random = Random.Range(0, 360);//GetRandomRange();
+        if (!debugMode)
+            return;
 
-            var rect = image.rectTransform.rect;
-            var pos = image.transform.position;
+        var rect = image.rectTransform.rect;
+        var pos = image.transform.position;
 
-            Vector2 buildingPos = //transform.TransformDirection(//transforma la direccion de local a global
-                new Vector2(
-                pos.x + rect.x * Mathf.Cos(Mathf.Deg2Rad * random),
-                pos.y + rect.y * Mathf.Sin(Mathf.Deg2Rad * random)
-                );//normaliza la direccion y le aplica la magnitud del radio
-            
-            //var available = posibleSpawns.Where(x => !x.isUsed).ToArray();
-            //
-            //var spawn = available[Random.Range(0, available.Length)];
-            //spawn.isUsed = true;
-            //
-            ////setea nuevo array con elemento usado
-            //SetSpawnPoint(spawn);
-            //
-            //
-            //
-            var buildingObj= Instantiate(building, buildingPos, Quaternion.identity, this.transform);
-            //
-            //buildingObj.planet = this;
-            //buildingObj.spawnPoint = spawn;
+        Gizmos.color = Color.red;
 
-            yield return new WaitForSeconds(0.5f);
-        }
+        Gizmos.DrawSphere(new Vector2(
+                pos.x + rect.x * Mathf.Cos(Mathf.Deg2Rad * degrees),
+                pos.y + rect.y * Mathf.Sin(Mathf.Deg2Rad * degrees)
+                ), 10);
+
+        Debug.Log(new Vector2(
+                pos.x + rect.x * Mathf.Cos(Mathf.Deg2Rad * degrees),
+                pos.y + rect.y * Mathf.Sin(Mathf.Deg2Rad * degrees)
+                ));
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //IEnumerator _update()
+    //{
+    //    while (true)
+    //    {
+    //        var random = Random.Range(0, 360);//GetRandomRange();
+    //
+    //        var rect = image.rectTransform.rect;
+    //        var pos = image.transform.position;
+    //
+    //        Vector2 buildingPos = //transform.TransformDirection(//transforma la direccion de local a global
+    //            new Vector2(
+    //            pos.x + rect.x * Mathf.Cos(Mathf.Deg2Rad * random),
+    //            pos.y + rect.y * Mathf.Sin(Mathf.Deg2Rad * random)
+    //            );//normaliza la direccion y le aplica la magnitud del radio
+    //        
+    //        //var available = posibleSpawns.Where(x => !x.isUsed).ToArray();
+    //        //
+    //        //var spawn = available[Random.Range(0, available.Length)];
+    //        //spawn.isUsed = true;
+    //        //
+    //        ////setea nuevo array con elemento usado
+    //        //SetSpawnPoint(spawn);
+    //        //
+    //        //
+    //        //
+    //        var buildingObj= Instantiate(building, buildingPos, Quaternion.identity, this.transform);
+    //        //
+    //        //buildingObj.planet = this;
+    //        //buildingObj.spawnPoint = spawn;
+    //
+    //        yield return new WaitForSeconds(0.5f);
+    //    }
+    //}
     //public void SetSpawnPoint(SpawnPoint spawn)
     //{
     //    posibleSpawns = posibleSpawns.Where(x => x.transform != spawn.transform).Append(spawn).ToArray();
@@ -103,31 +131,9 @@ public class Planet : MonoBehaviour
     //            return num;
     //    }
     //}
-
-    private void OnDrawGizmos()
-    {
-        if (!gizmos)
-            return;
-
-        var rect = image.rectTransform.rect;
-        var pos = image.transform.position;
-        
-        Gizmos.color = Color.red;
-        
-        Gizmos.DrawSphere(new Vector2(
-                pos.x + rect.x * Mathf.Cos(Mathf.Deg2Rad * deg),
-                pos.y + rect.y * Mathf.Sin(Mathf.Deg2Rad * deg)
-                ),10);
-
-        Debug.Log(new Vector2(
-                pos.x + rect.x * Mathf.Cos(Mathf.Deg2Rad * deg),
-                pos.y + rect.y * Mathf.Sin(Mathf.Deg2Rad * deg)
-                ));
-    }
-}
-[System.Serializable]
-public struct Range
-{
-    public int min;
-    public int max;
-}
+//[Serializable]
+//public struct Range
+//{
+//    public int min;
+//    public int max;
+//}

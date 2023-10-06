@@ -1,28 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Building : MonoBehaviour
+public class Building : MonoBehaviour, IPointerClickHandler
 {
-    public Planet planet;
+    public Image image;
+    public Sprite sprite;
+    public Structure[] structures { get => GameManager.Instance.structures; }
 
-    //public 
+    public bool hasChoose;
 
-    //public SpawnPoint spawnPoint;
+    public int structureSelected;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        //StartCoroutine(lifetime());
+        image = GetComponent<Image>();
+        ReRollStructure();
     }
-    IEnumerator lifetime()
+    public void ReRollStructure()
     {
-
-        //cuando pase la pantalla
-        yield return new WaitForSeconds(5);
-        //spawnPoint.isUsed = false;
-        //planet.SetSpawnPoint(spawnPoint);
-        Destroy(this);
+        structureSelected = Random.Range(0, structures.Length);
+        image.sprite = structures[structureSelected].before;
     }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        image.sprite = structures[structureSelected].after;
+        hasChoose = true;
+    }
+}
+[System.Serializable]
+public struct Structure
+{
+    public Sprite before;
+    public Sprite after;
 }
