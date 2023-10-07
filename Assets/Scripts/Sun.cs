@@ -6,7 +6,8 @@ public class Sun : MonoBehaviour
 {
     public Raylight raylight;
 
-    [SerializeField] int initialAmmount = 10;
+    [SerializeField] int initialAmmount = 1;
+    [SerializeField] float secBetweenSpawn = 0.3f;
 
     public void Start()
     {
@@ -21,21 +22,20 @@ public class Sun : MonoBehaviour
             {
                 for (int i = 0; i < initialAmmount; i++)
                 {
-                    var obj = Instantiate(raylight, transform.position, Quaternion.identity);
-                        //obj.transform.up= new Vector2(Random.Range(0, 1.1f), -1);
-                    obj.GetComponent<Raylight>().SetVelocity(new Vector2(Random.Range(0, 1.1f), -1));
-                    yield return new WaitForSeconds(0.2f);
+                    InstantiateRay();
+                    yield return new WaitForSeconds(secBetweenSpawn);
                 }
                 first = true;
             }
             else
-            {
-                var obj = Instantiate(raylight, transform.position, Quaternion.identity);
-                //obj.transform.up = new Vector2(Random.Range(0, 1.1f), -1);
-                obj.GetComponent<Raylight>().SetVelocity(new Vector2(Random.Range(0, 1.1f), -1));
-            }
+                InstantiateRay();
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.2f);
         }
+    }
+    public void InstantiateRay()
+    {
+        var obj = Instantiate(raylight, transform.position, Quaternion.identity);
+        obj.transform.up = new Vector2(Random.Range(0, 1.1f), -1);
     }
 }
