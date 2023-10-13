@@ -1,0 +1,90 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
+public class Trivia : MonoBehaviour
+{
+    [SerializeField] List<Questions> questions;
+    Questions currentQuestion;
+
+    [SerializeField] Image izqCharacter;
+    [SerializeField] Image derCharacter;
+
+    [SerializeField] TextMeshProUGUI questionText;
+
+    [SerializeField] TextMeshProUGUI answerText0;
+    [SerializeField] TextMeshProUGUI answerText1;
+    [SerializeField] TextMeshProUGUI answerText2;
+
+    [SerializeField] UnityEvent onEnd;
+    public Scenes nextScene;
+
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(nextScene.ToString());
+    }
+
+    public void Start()
+    {
+        SetNewQuestion();
+    }
+    public void SetNewQuestion()
+    {
+        if (questions.Count <= 0)
+        {
+            onEnd?.Invoke();
+            return;
+        }
+
+        currentQuestion = questions[0];
+        questions.RemoveAt(0);
+
+        izqCharacter.sprite = currentQuestion.izqCharacter;
+        derCharacter.sprite = currentQuestion.derCharacter;
+
+        questionText.text = currentQuestion.question;
+
+        answerText0.text = currentQuestion.answers[0].text;
+        answerText1.text = currentQuestion.answers[1].text;
+        answerText2.text = currentQuestion.answers[2].text;
+    }
+    public void CheckAnswer(int index)
+    {
+        if (index >= currentQuestion.answers.Count)
+            return;
+
+        if (currentQuestion.answers[index].isTrue)
+        {
+            Debug.Log("Bien!");
+        }
+        else
+        {
+            Debug.Log("Mal :(");
+        }
+        SetNewQuestion();
+    }
+
+    //para los botones
+    public void CheckAnswer0() => CheckAnswer(0);
+    public void CheckAnswer1() => CheckAnswer(1);
+    public void CheckAnswer2() => CheckAnswer(2);
+}
+[System.Serializable]
+public struct Questions
+{
+    public Sprite izqCharacter;
+    public Sprite derCharacter;
+    public string question;
+    public List<Answer> answers;
+}
+[System.Serializable]
+public struct Answer
+{
+    public string text;
+    public bool isTrue;
+}

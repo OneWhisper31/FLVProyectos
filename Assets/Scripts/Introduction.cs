@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class Introduction : MonoBehaviour
 {
@@ -17,15 +18,25 @@ public class Introduction : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI popUpTextIzq;
     [SerializeField] TextMeshProUGUI popUpTextDer;
-
+    
+    [SerializeField] UnityEvent onEnd;
     public Scenes nextScene;
+
+
+    public void LoadScene(){
+        SceneManager.LoadScene(nextScene.ToString());
+    }
+
+    public void Start(){
+        OnNext();
+    }
 
     // Start is called before the first frame update
     public void OnNext()
     {
         if (dialoges.Count <= 0)
         {
-            SceneManager.LoadScene(nextScene.ToString());
+            onEnd?.Invoke();
             return;
         }
 
@@ -69,6 +80,8 @@ public enum PopUpDir
 }
 public enum Scenes
 {
-    ODS13
+    ODS13,
+    Introduction,
+    Trivia
     //agregar mas escenas
 }
