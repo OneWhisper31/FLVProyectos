@@ -22,13 +22,9 @@ public class EvaluateHandler : MonoBehaviour
         if (building!=null)
         {
             if (building.hasChoose)
-                GameManager.Instance.chanceHandler--;
+                GameManager.Instance.temperatureHandler--;
             else
-                GameManager.Instance.chanceHandler++;
-
-            building.ReRollStructure();
-
-            //Debug.Log(GameManager.Instance.chanceHandler);
+                GameManager.Instance.temperatureHandler++;
         }   
     }
 }

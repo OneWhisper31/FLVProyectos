@@ -8,32 +8,35 @@ public class Building : MonoBehaviour, IPointerClickHandler
 {
     public Image image;
     public Sprite sprite;
-    public Structure[] structures { get => GameManager.Instance.structures; }
 
     public bool hasChoose;
 
-    public int structureSelected;
+    public Structure structureSelected;
 
     private void Start()
     {
         image = GetComponent<Image>();
-        ReRollStructure();
-    }
-    public void ReRollStructure()
-    {
-        structureSelected = Random.Range(0, structures.Length);
-        image.sprite = structures[structureSelected].before;
+        GameManager.Instance.ReRollStructure(this);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        image.sprite = structures[structureSelected].after;
-        hasChoose = true;
+        //image.sprite = structures[structureSelected].after;
+        //hasChoose = true;
     }
 }
 [System.Serializable]
 public struct Structure
 {
-    public Sprite before;
-    public Sprite after;
+    public Sprite initial;//una cruz en todas
+    public SpriteStructure positive1;
+    public SpriteStructure positive2;
+    public SpriteStructure negative;
 }
+[System.Serializable]
+public struct SpriteStructure
+{
+    public Sprite sprite;
+    public Sprite icon;
+}
+

@@ -1,41 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Raylight : MonoBehaviour
 {
-    [SerializeField] float speed;
-
-    [SerializeField] Rigidbody2D rb;
-
     private void Start()
     {
-        SetVelocity();
-        //StartCoroutine(DestroyRay()); se autodestruyen cuando se quedan sin velocidad
-    }
-    public void Update()
-    {
-        if (transform.position.y > -350)
-            Destroy(this.gameObject);
+        StartCoroutine(DestroyRay());
     }
 
     public IEnumerator DestroyRay()
     {
-        yield return new WaitForSeconds(5f);
-        Destroy(this.gameObject);
-    }
-
-    public void Bounce()
-    {
-        transform.up = (new Vector2(Random.Range(-1,1.1f)-transform.up.x, -transform.up.y)).normalized;
-        SetVelocity();
-    }
-    public void SetVelocity()
-    {
-        rb.velocity = transform.up * speed;
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Bounce();
+        yield return new WaitForSeconds(Random.Range(5,10));
+        transform.DOScale(0,2).OnComplete(()=>Destroy(this.gameObject));
     }
 }
