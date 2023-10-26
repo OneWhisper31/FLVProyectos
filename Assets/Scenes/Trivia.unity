@@ -257,7 +257,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Respuesta 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
   m_sharedMaterial: {fileID: -1680448739716880112, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &254108155
@@ -803,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: dialoges.Array.data[0].text
-      value: y a vos, que te parece todo esto?
+      value: "\xBFComo podriamos seguir ayudando?"
       objectReference: {fileID: 0}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: onEnd.m_PersistentCalls.m_Calls.Array.size
@@ -1232,7 +1232,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Respuesta 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
   m_sharedMaterial: {fileID: -1680448739716880112, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1918820639
@@ -1366,7 +1366,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Respuesta 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
   m_sharedMaterial: {fileID: -1680448739716880112, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1430,7 +1430,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2057523643
@@ -1903,24 +1903,49 @@ MonoBehaviour:
   questions:
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
-    question: De que color son los limones
+    question: "\xBFCu\xE1l de los siguientes h\xE1bitos cotidianos puede ayudar a
+      reducir la huella de carbono?"
     answers:
-    - text: verdes
+    - text: "Utilizar bolsas de pl\xE1stico desechables"
       isTrue: 0
-    - text: Amarillos
+    - text: "Tomar duchas largas todos los d\xEDas"
+      isTrue: 0
+    - text: "Usar transporte p\xFAblico en lugar de conducir un autom\xF3vil"
       isTrue: 1
-    - text: rojos
+  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
+    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+    question: "\xBFCu\xE1l de los siguientes h\xE1bitos contribuye a la conservaci\xF3n
+      de energ\xEDa en el hogar?"
+    answers:
+    - text: "Apagar los electrodom\xE9sticos cuando no est\xE1n en uso"
+      isTrue: 1
+    - text: "Usar calentadores el\xE9ctricos en lugar de sistemas de calefacci\xF3n
+        central"
+      isTrue: 0
+    - text: Dejar correr el grifo de agua mientras te cepillas los dientes
       isTrue: 0
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
-    question: De que color son las limas
+    question: "\xBFC\xF3mo puedes contribuir a la protecci\xF3n de la biodiversidad
+      y la conservaci\xF3n de los ecosistemas?"
     answers:
-    - text: verdes
+    - text: "Participar en la tala de \xE1rboles"
+      isTrue: 0
+    - text: "Usar pesticidas fuertes en tu jard\xEDn"
+      isTrue: 0
+    - text: Reducir, reutilizar y reciclar
       isTrue: 1
-    - text: Amarillos
+  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
+    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+    question: " \xBFQu\xE9 acci\xF3n puedes tomar para reducir la cantidad de residuos
+      pl\xE1sticos en el ambiente?"
+    answers:
+    - text: "Comprar productos envasados en pl\xE1stico de un solo uso"
       isTrue: 0
-    - text: rojos
+    - text: "Usar botellas de agua de pl\xE1stico desechables"
       isTrue: 0
+    - text: "Reciclar botellas de pl\xE1stico adecuadamente"
+      isTrue: 1
   izqCharacter: {fileID: 8196724482388342425}
   derCharacter: {fileID: 6878019856514035628}
   questionText: {fileID: 8964414942527093129}
@@ -1965,7 +1990,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'PREGUNTA:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
   m_sharedMaterial: {fileID: -1680448739716880112, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1996,7 +2021,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 50
-  m_fontStyle: 3
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2029,7 +2054,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1660057539 &9223372036854775807

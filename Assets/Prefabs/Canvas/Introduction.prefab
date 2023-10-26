@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
   m_sharedMaterial: {fileID: -1680448739716880112, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5381887054011195626
@@ -343,38 +343,36 @@ MonoBehaviour:
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
     popUpDir: 0
-    text: Uff, que calor de verano y recien es primavera.
+    text: "\xA1Hola, Amira! \xBFHas o\xEDdo hablar de los Objetivos de Desarrollo
+      Sostenible?"
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
     popUpDir: 1
-    text: Si, es cierto. Mi papa me conto que cuando el iba a la escuela las temperaturas
-      primaverales no eran tan altas.
+    text: "\xA1S\xED, claro! Son esos objetivos para hacer del mundo un lugar mejor,
+      \xBFverdad?"
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
     popUpDir: 0
-    text: "\xBFEn serio? \xBFPor que? \xBFQue habra cambiado en todo este tiempo
-      para que hoy las temperaturas sean mas altas?"
+    text: "Exacto, y hoy vamos a hablar sobre uno de ellos, el ODS 13: Acci\xF3n
+      por el clima."
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
     popUpDir: 1
-    text: "Me explico que los seres humanos cuidamos cada vez menos el planeta. La
-      forma en que explotamos los recursos naturales y la manera en que las industrias
-      los procesan aceler\xF3 mucho el proceso de cambio climatico."
+    text: " \xA1Suena importante! \xBFEn qu\xE9 consiste?"
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
     popUpDir: 0
-    text: "\xBFY solo sucede que suben las temperaturas?"
+    text: "El ODS 13 se trata de tomar medidas para combatir el cambio clim\xE1tico
+      y sus efectos. Esto incluye fortalecer la resiliencia de los pa\xEDses ante
+      los riesgos relacionados con el clima y desastres naturales."
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
     popUpDir: 1
-    text: "\xA1No! Las temperaturas se hacen mas extremas: mucho frio y mucho calor.
-      Tambien se derriten los glaciares y todos los fenomenos climaticos son mas
-      intensos y frecuentes."
+    text: " \xA1Suena como algo que todos debemos tomar en serio!"
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
     popUpDir: 0
-    text: "\xA1Tenemos que hacer algo! \xA1El cambio climatico es un problema global
-      que requiere soluciones globales!"
+    text: "Exactamente \xA1Juntos podemos marcar la diferencia!"
   izqCharacter: {fileID: 1378392258690828801}
   derCharacter: {fileID: 4436669707200844596}
   popUpIzq: {fileID: 6203356414108892538}
@@ -673,7 +671,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
   m_sharedMaterial: {fileID: -1680448739716880112, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -737,7 +735,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7740388581092129552
@@ -880,10 +878,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Siguiente
+  m_text: SIGUIENTE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
-  m_sharedMaterial: {fileID: -1680448739716880112, guid: 93356fe0945a12c4cbb7b934be5b05b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
+  m_sharedMaterial: {fileID: 6883945059828259780, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -907,12 +905,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 60
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 60
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

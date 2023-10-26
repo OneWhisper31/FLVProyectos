@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,10 +11,18 @@ public class GameManager : MonoBehaviour
     public int lastStructureIndex;
 
     public GameObject raylightPrefab;
-    public int geiLimitX;
-    public int geiLimitY;
+    [SerializeField] float geiLimitX;
+    [SerializeField] float geiLimitY;
+    [SerializeField] float offsetY;
+    [SerializeField] float atmosphericRadius;
+
+
+    [SerializeField] int initalGei = 10;
 
     public int temperatureHandler=0;
+
+    [SerializeField] bool debugMode;
+    [SerializeField] float debugModeAngle;
 
     private void Awake()
     {
@@ -25,20 +34,39 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
     private void Start()
-    {
-        StartCoroutine(SpawnGEI());
-    }
+    =>StartCoroutine(SpawnGEI());
+
     public IEnumerator SpawnGEI()
     {
-        var cameraPos = Camera.main.transform.position;
-        cameraPos.z = 0;
+        for (int i = 0; i < initalGei; i++)
+            NewGEI();
+
         while (true)
         {
-            var obj = Instantiate(raylightPrefab, cameraPos, Quaternion.identity, null);
-            obj.transform.position
-                += new Vector3(Random.Range(-geiLimitX, geiLimitX + 1), Random.Range(-geiLimitY, geiLimitY + 1), 0);
-            yield return new WaitForSecondsRealtime(Random.Range(5, 10));
+            NewGEI();
+            yield return new WaitForSeconds(Random.Range(1, 3));
         }
+    }
+    public void NewGEI()
+    {
+        float semiMajorAxis = geiLimitX;  // Semieje mayor
+        float semiMinorAxis = geiLimitY;  // Semieje menor
+
+        // Generar un ángulo aleatorio en radianes dentro de un semicirculo (0 a 1*pi)
+        float randomAngle = Random.Range(0f, 1f * Mathf.PI);
+        float randomRadius = Random.Range(0f, atmosphericRadius);
+
+
+        var obj = Instantiate(raylightPrefab,
+            new Vector3(geiLimitX * randomRadius * Mathf.Cos(randomAngle), geiLimitY * randomRadius * Mathf.Sin(randomAngle)- offsetY, 0)
+            //Vector3.ClampMagnitude(
+            //new Vector3(Random.Range(geiLimitMinusX, geiLimitX + 1), Random.Range(geiLimitMinusY, geiLimitY + 1), 0)//,atmosphericRadius)
+            , Quaternion.identity, null);
+
+        float currentScale = obj.transform.localScale.x;
+
+        obj.transform.localScale = Vector3.zero;
+        obj.transform.DOScale(currentScale + Random.Range(0f, 0.2f), 2);
     }
 
     public void ReRollStructure(Building building)
@@ -68,4 +96,18 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    public void OnDrawGizmos()
+    {
+        if (!debugMode)
+            return;
+
+        float randomAngle = debugModeAngle * Mathf.PI;
+
+        // Calcular la distancia radial dentro de la elipse
+        //float randomRadius = Random.Range(0f, 1f);  // Valor entre 0 y 1
+
+        // Calcular las coordenadas en la elipse
+        Gizmos.DrawSphere(new Vector3(geiLimitX * atmosphericRadius * Mathf.Cos(randomAngle), geiLimitY* atmosphericRadius * Mathf.Sin(randomAngle) - offsetY, 0),2);
+    }
+
 }

@@ -582,6 +582,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1490023124003850507, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: m_text
+      value: SIGUIENTE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490023124003850507, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
+    - target: {fileID: 1490023124003850507, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6883945059828259780, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
+    - target: {fileID: 1490023124003850507, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2199563033459328273, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: m_text
       value: 
@@ -590,6 +606,10 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 2199563033459328273, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
     - target: {fileID: 2199563033459328273, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: m_fontSizeMax
       value: 50
@@ -604,6 +624,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199563033459328273, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163287335964895732, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -11.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163287335964895732, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5381887054011195626, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
@@ -643,6 +671,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5786363707859978086, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
+    - target: {fileID: 5786363707859978086, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: m_fontSizeMax
       value: 50
       objectReference: {fileID: 0}
@@ -656,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5786363707859978086, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6225997853235655923, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: m_Sprite
@@ -693,11 +725,6 @@ PrefabInstance:
     - target: {fileID: 6521403686730001493, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -148.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
-      propertyPath: dialoges.Array.data[1].text
-      value: Si, es cierto. Mi papa me conto que cuando el iba a la escuela las temperaturas
-        primaverales no eran tan altas.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
