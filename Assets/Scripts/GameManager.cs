@@ -19,8 +19,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] int initalGei = 10;
 
-    public int temperatureHandler=0;
+    //public int temperatureHandler = 0;
+    [SerializeField] CanvasHandler canvasHandler;
 
+    public bool pauseMode = true;//if false
+
+    [Header("DebugMode")]
     [SerializeField] bool debugMode;
     [SerializeField] float debugModeAngle;
 
@@ -34,7 +38,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
     private void Start()
-    =>StartCoroutine(SpawnGEI());
+    => StartCoroutine(SpawnGEI());
 
     public IEnumerator SpawnGEI()
     {
@@ -43,6 +47,9 @@ public class GameManager : MonoBehaviour
 
         while (true)
         {
+            if (pauseMode)
+                yield return new WaitUntil(() => !pauseMode);
+
             NewGEI();
             yield return new WaitForSeconds(Random.Range(1, 3));
         }
@@ -58,7 +65,7 @@ public class GameManager : MonoBehaviour
 
 
         var obj = Instantiate(raylightPrefab,
-            new Vector3(geiLimitX * randomRadius * Mathf.Cos(randomAngle), geiLimitY * randomRadius * Mathf.Sin(randomAngle)- offsetY, 0)
+            new Vector3(geiLimitX * randomRadius * Mathf.Cos(randomAngle), geiLimitY * randomRadius * Mathf.Sin(randomAngle) - offsetY, 0)
             //Vector3.ClampMagnitude(
             //new Vector3(Random.Range(geiLimitMinusX, geiLimitX + 1), Random.Range(geiLimitMinusY, geiLimitY + 1), 0)//,atmosphericRadius)
             , Quaternion.identity, null);
@@ -88,10 +95,10 @@ public class GameManager : MonoBehaviour
             structures[i] = structures[j];
             structures[j] = temp;
         }
-        if(structures[0].initial== structure.initial)
+        if (structures[0].initial == structure.initial)
         {//para que no se repitan dos veces seguidas
             Structure temp = structures[0];
-            structures[0] = structures[structures.Length-1];
+            structures[0] = structures[structures.Length - 1];
             structures[structures.Length - 1] = temp;
         }
 

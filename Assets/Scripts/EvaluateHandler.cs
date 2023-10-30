@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EvaluateHandler : MonoBehaviour
 {
+    [SerializeField] CanvasHandler canvasHandler;
+
     private void Start()
     {
         StartCoroutine(StartCounting());
@@ -22,9 +24,9 @@ public class EvaluateHandler : MonoBehaviour
         if (building!=null)
         {
             if (building.hasChoose)
-                GameManager.Instance.temperatureHandler--;
+                canvasHandler.UpdateTemperature(-0.05f);//sube temperatura
             else
-                GameManager.Instance.temperatureHandler++;
+                canvasHandler.UpdateTemperature(0.05f);//baja temperatura
         }   
     }
 }

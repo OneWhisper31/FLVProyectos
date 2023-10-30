@@ -13,6 +13,13 @@ public class Raylight : MonoBehaviour
     public IEnumerator DestroyRay()
     {
         yield return new WaitForSeconds(Random.Range(5,10));
+
+        if (GameManager.Instance.pauseMode)
+        {
+            yield return new WaitUntil(() => !GameManager.Instance.pauseMode);
+            yield return new WaitForSeconds(Random.Range(5, 10));
+        }
+
         transform.DOScale(0,2).OnComplete(()=>Destroy(this.gameObject));
     }
 }

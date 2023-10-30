@@ -21,6 +21,8 @@ public class Building : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (GameManager.Instance.pauseMode)
+            return;
         //image.sprite = structures[structureSelected].after;
         //hasChoose = true;
     }
