@@ -13,16 +13,26 @@ public class GameManager : MonoBehaviour
     public GameObject raylightPrefab;
     [SerializeField] float geiLimitX;
     [SerializeField] float geiLimitY;
+    [SerializeField] float geiLimitMinusX;
+    [SerializeField] float geiLimitMinusY;
     [SerializeField] float offsetY;
     [SerializeField] float atmosphericRadius;
 
 
     [SerializeField] int initalGei = 10;
 
-    //public int temperatureHandler = 0;
-    [SerializeField] CanvasHandler canvasHandler;
-
     public bool pauseMode = true;//if false
+
+    public OptionsPanel OptionPanel { get {
+            if (optionPanel==null)
+            {
+                optionPanel = FindObjectOfType<OptionsPanel>();
+                return optionPanel;
+            }
+            else
+                return optionPanel;
+    }}
+    OptionsPanel optionPanel;
 
     [Header("DebugMode")]
     [SerializeField] bool debugMode;
@@ -56,18 +66,18 @@ public class GameManager : MonoBehaviour
     }
     public void NewGEI()
     {
-        float semiMajorAxis = geiLimitX;  // Semieje mayor
-        float semiMinorAxis = geiLimitY;  // Semieje menor
+        //float semiMajorAxis = geiLimitX;  // Semieje mayor
+        //float semiMinorAxis = geiLimitY;  // Semieje menor
 
         // Generar un ángulo aleatorio en radianes dentro de un semicirculo (0 a 1*pi)
-        float randomAngle = Random.Range(0f, 1f * Mathf.PI);
-        float randomRadius = Random.Range(0f, atmosphericRadius);
+        //float randomAngle = Random.Range(0f, 1f * Mathf.PI);
+        //float randomRadius = Random.Range(0f, atmosphericRadius);
 
 
         var obj = Instantiate(raylightPrefab,
-            new Vector3(geiLimitX * randomRadius * Mathf.Cos(randomAngle), geiLimitY * randomRadius * Mathf.Sin(randomAngle) - offsetY, 0)
+            //new Vector3(geiLimitX * randomRadius * Mathf.Cos(randomAngle), geiLimitY * randomRadius * Mathf.Sin(randomAngle) - offsetY, 0)
             //Vector3.ClampMagnitude(
-            //new Vector3(Random.Range(geiLimitMinusX, geiLimitX + 1), Random.Range(geiLimitMinusY, geiLimitY + 1), 0)//,atmosphericRadius)
+            new Vector3(Random.Range(geiLimitMinusX, geiLimitX + 1), Random.Range(geiLimitMinusY, geiLimitY + 1), 0)//,atmosphericRadius)
             , Quaternion.identity, null);
 
         float currentScale = obj.transform.localScale.x;

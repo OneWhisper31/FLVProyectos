@@ -1,0 +1,88 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
+[RequireComponent(typeof(Image))]
+public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IPointerClickHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+{
+    public bool interacteable = true;
+
+    protected bool disableAnims;
+
+    protected bool scaleAnims=true;
+
+    public Image image;
+    protected Vector3 initialScale;
+
+    private void Awake()
+    {
+        image = GetComponent<Image>();
+        initialScale = transform.localScale;
+    }
+
+    public virtual void OnPointerDown(PointerEventData eventData)
+    {
+        if (disableAnims)
+            return;
+
+        image.color = Color.gray;
+    }
+    public virtual void OnPointerUp(PointerEventData eventData)
+    {
+        image.color = Color.white;
+    }
+    public virtual void OnPointerEnter(PointerEventData eventData)
+    {
+        if (disableAnims)
+            return;
+
+        if(scaleAnims)
+            transform.localScale *= 1.1f;
+
+        StartCoroutine(AnimAssetColor());
+    }
+    public virtual void OnPointerExit(PointerEventData eventData)
+    {
+        if (disableAnims)
+            return;
+
+        if (scaleAnims)
+            transform.localScale = initialScale;
+
+        StopAllCoroutines();
+        image.color = Color.white;
+    }
+    IEnumerator AnimAssetColor()
+    {
+        float numberLerp;
+        Color color = image.color;
+
+        while (true)
+        {
+            numberLerp = Mathf.PingPong(Time.time*2, 1)*0.2f+0.8f;
+
+            color.r = numberLerp;
+            color.g = numberLerp;
+            color.b = numberLerp;
+
+            image.color = color;
+
+            yield return new WaitForEndOfFrame();
+        }
+    } 
+
+    //action
+    public virtual void OnPointerClick(PointerEventData eventData)
+    {
+        if(GameManager.Instance!=null)
+            if (GameManager.Instance.pauseMode)
+                return;
+
+        if (!interacteable)
+            return;
+
+    }
+    
+}

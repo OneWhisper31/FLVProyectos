@@ -21,12 +21,7 @@ public class EvaluateHandler : MonoBehaviour
 
         var building = collision.GetComponent<Building>();
 
-        if (building!=null)
-        {
-            if (building.hasChoose)
-                canvasHandler.UpdateTemperature(-0.05f);//sube temperatura
-            else
-                canvasHandler.UpdateTemperature(0.05f);//baja temperatura
-        }   
+        if (building!=null)//si la accion es positiva seria -0.05 * 1 por lo que bajaria la temperatura || sino -0.05 * -1
+            canvasHandler.UpdateTemperature(-0.05f* building.value);
     }
 }
