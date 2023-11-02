@@ -20,14 +20,15 @@ public class Trivia : MonoBehaviour
     [SerializeField] TextMeshProUGUI answerText1;
     [SerializeField] TextMeshProUGUI answerText2;
 
+    [SerializeField] DefaultButton answerButton0;
+    [SerializeField] DefaultButton answerButton1;
+    [SerializeField] DefaultButton answerButton2;
+
+    [SerializeField] TriviaAnimHandler triviaAnim;
+
     [SerializeField] UnityEvent onEnd;
+    public bool Finished { get => questions.Count <= 0; }
     public Scenes nextScene;
-
-
-    public void LoadScene()
-    {
-        SceneManager.LoadScene(nextScene.ToString());
-    }
 
     public void Start()
     {
@@ -58,17 +59,16 @@ public class Trivia : MonoBehaviour
         if (index >= currentQuestion.answers.Count)
             return;
 
-        if (currentQuestion.answers[index].isTrue)
-        {
-            Debug.Log("Bien!");
-        }
-        else
-        {
-            Debug.Log("Mal :(");
-        }
-        SetNewQuestion();
-    }
+        SetButtonsInteract(false);
 
+        triviaAnim.NextQuestionAnim(currentQuestion.answers[index].isTrue);
+    }
+    public void SetButtonsInteract(bool value)
+    {
+        answerButton0.Interacteable = value;
+        answerButton1.Interacteable = value;
+        answerButton2.Interacteable = value;
+    }
     //para los botones
     public void CheckAnswer0() => CheckAnswer(0);
     public void CheckAnswer1() => CheckAnswer(1);

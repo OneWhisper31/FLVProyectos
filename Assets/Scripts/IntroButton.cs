@@ -11,7 +11,7 @@ public class IntroButton : InteractuableObject
     {
         base.OnPointerClick(eventData);
 
-        if (!interacteable)
+        if (!Interacteable)
             return;
 
         intro.OnNext();

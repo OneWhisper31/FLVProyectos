@@ -7,7 +7,18 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Image))]
 public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IPointerClickHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public bool interacteable = true;
+    public bool isAffectedByPauseMode=true;
+
+    bool interacteable = true;
+    [SerializeField]public bool Interacteable
+    {
+        get => interacteable;
+        set
+        {
+            image.color = value ? Color.white : Color.gray;
+            interacteable = value;
+        }
+    }
 
     protected bool disableAnims;
 
@@ -24,18 +35,21 @@ public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IP
 
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-        if (disableAnims)
+        if (disableAnims||!interacteable)
             return;
 
         image.color = Color.gray;
     }
     public virtual void OnPointerUp(PointerEventData eventData)
     {
+        if (disableAnims || !interacteable)
+            return;
+
         image.color = Color.white;
     }
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
-        if (disableAnims)
+        if (disableAnims||!interacteable)
             return;
 
         if(scaleAnims)
@@ -45,7 +59,7 @@ public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IP
     }
     public virtual void OnPointerExit(PointerEventData eventData)
     {
-        if (disableAnims)
+        if (disableAnims|| !interacteable)
             return;
 
         if (scaleAnims)
@@ -78,10 +92,14 @@ public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IP
     {
         if(GameManager.Instance!=null)
             if (GameManager.Instance.pauseMode)
-                return;
+                if(isAffectedByPauseMode)
+                    return;
 
         if (!interacteable)
             return;
+
+        transform.localScale = initialScale;
+        StopAllCoroutines();
 
     }
     

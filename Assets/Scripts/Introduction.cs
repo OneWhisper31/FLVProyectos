@@ -27,8 +27,13 @@ public class Introduction : MonoBehaviour
     [SerializeField] UnityEvent onEnd;
     public Scenes nextScene;
 
+    private void Start()
+    {
+        button.Interacteable = false;
+    }
+
     public void LoadScene(){
-        button.interacteable = false;
+        button.Interacteable = false;
         StartCoroutine(FadeOut());
     }
     IEnumerator FadeOut()
@@ -55,7 +60,7 @@ public class Introduction : MonoBehaviour
     // Start is called before the first frame update
     public void OnNext()
     {
-        button.interacteable = false;
+        button.Interacteable = false;
         if (dialoges.Count <= 0)
         {
             onEnd?.Invoke();
@@ -76,7 +81,7 @@ public class Introduction : MonoBehaviour
                 popUpIzq.SetActive(true);
                 popUpIzq.transform.DOScale(1, 0.5f)
                     .OnComplete(() => popUpDer.transform.DOScale(0, 0.5f)
-                    .OnComplete(() => { button.interacteable = true; popUpDer.SetActive(false); }));
+                    .OnComplete(() => { button.Interacteable = true; popUpDer.SetActive(false); }));
                 break;
             case PopUpDir.Der:
                 popUpTextDer.text = dialoge.text;
@@ -84,7 +89,7 @@ public class Introduction : MonoBehaviour
                 popUpDer.SetActive(true);
                 popUpDer.transform.DOScale(1, 0.5f)
                     .OnComplete(() => popUpIzq.transform.DOScale(0, 0.5f)
-                    .OnComplete(() => { button.interacteable = true; popUpIzq.SetActive(false); }));
+                    .OnComplete(() => { button.Interacteable = true; popUpIzq.SetActive(false); }));
                 break;
             default:
                 break;

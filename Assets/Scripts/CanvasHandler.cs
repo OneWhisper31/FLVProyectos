@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class CanvasHandler : MonoBehaviour
 {
@@ -19,7 +20,13 @@ public class CanvasHandler : MonoBehaviour
     [Header("Temperature variables")]
     [SerializeField] Slider temperature;
 
+    [SerializeField] Slider temperatureFinal;
+    [SerializeField] Transform finishSing;
+    [SerializeField] DefaultButton finishButton;
+    [SerializeField] FadeManager fadeManager;
     //[SerializeField] float totalTemperature;
+
+    bool onFinish;
 
     private void Start()
     {
@@ -41,6 +48,8 @@ public class CanvasHandler : MonoBehaviour
     }
     public void UpdateYears()
     {
+        if (onFinish) return;
+
         currentYear++;
         currentTime = 0;
         years.text = currentYear + "";
@@ -50,9 +59,34 @@ public class CanvasHandler : MonoBehaviour
     }
     public void EndGame()
     {
-        GameManager.Instance.pauseMode = true;
+        if (onFinish) return;
+
+        onFinish = true;
+        //GameManager.Instance.pauseMode = true;
         currentTime = 0;
-        Time.timeScale = 0;
+
+        finishSing.DOScale(1, 0.5f)
+            .OnComplete(() => {
+                StartCoroutine(TemperatureUp());
+                //finishButton.transform.DOScale(1, 0.5f);
+            }
+        );
+    }
+    IEnumerator TemperatureUp()
+    {
+        while (temperature.value - temperatureFinal.value <= 0.01f)
+        {
+            temperatureFinal.value = Mathf.Lerp(temperatureFinal.value, temperature.value, 0.1f);
+            yield return new WaitForEndOfFrame();
+        }
+        finishButton.Interacteable = true;
+        temperatureFinal.value = temperature.value;
+    }
+    public void NextLevel()
+    {
+        finishButton.Interacteable = false;
+        GameManager.Instance.pauseMode = false;
+        fadeManager.FadeOut();
     }
     public void UpdateTemperature(float number)=>
         temperature.value = Mathf.Clamp(number + temperature.value, 0, 1);

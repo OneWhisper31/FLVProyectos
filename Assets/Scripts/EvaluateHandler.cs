@@ -5,6 +5,7 @@ using UnityEngine;
 public class EvaluateHandler : MonoBehaviour
 {
     [SerializeField] CanvasHandler canvasHandler;
+    [SerializeField] OptionsPanel optionsPanel;
 
     private void Start()
     {
@@ -21,7 +22,12 @@ public class EvaluateHandler : MonoBehaviour
 
         var building = collision.GetComponent<Building>();
 
-        if (building!=null)//si la accion es positiva seria -0.05 * 1 por lo que bajaria la temperatura || sino -0.05 * -1
-            canvasHandler.UpdateTemperature(-0.05f* building.value);
+        if (building != null)//si la accion es positiva seria -0.05 * 1 por lo que bajaria la temperatura || sino -0.05 * -1
+        {
+            if (building == optionsPanel.CurrentBuilding)
+                optionsPanel.DisableOptions();
+
+            canvasHandler.UpdateTemperature(-0.05f * building.value);
+        }
     }
 }

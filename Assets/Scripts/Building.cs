@@ -23,7 +23,7 @@ public class Building : InteractuableObject
     {
         base.OnPointerClick(eventData);
 
-        if (!interacteable)
+        if (!Interacteable)
             return;
 
         if (!hasChange)//si no cambio todavia de estructura

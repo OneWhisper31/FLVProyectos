@@ -6,6 +6,7 @@ using DG.Tweening;
 public class OptionsPanel : MonoBehaviour
 {
     Building buildingSelected;
+    public Building CurrentBuilding { get => buildingSelected; }
 
     public bool IsOpen { get => transform.localScale == Vector3.one;}
 

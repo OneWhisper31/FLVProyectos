@@ -11,7 +11,7 @@ public class ChooseButton : InteractuableObject
     {
         base.OnPointerClick(eventData);
 
-        if (!interacteable)
+        if (!Interacteable)
             return;
 
         switch (value)

@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad846bf9b91d0ec4f9e389653e90941e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interacteable: 1
   image: {fileID: 3307227277310105422}
   structureSelected:
     initial: {fileID: 0}
@@ -143,7 +144,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 360, y: 72}
+  m_Size: {x: 72, y: 14.4}
   m_EdgeRadius: 0
 --- !u!50 &941993196484577652
 Rigidbody2D:
