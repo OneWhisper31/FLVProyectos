@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
+using System;
 
 public class CanvasHandler : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class CanvasHandler : MonoBehaviour
     int secondsPerYear;
     int currentYear;
     float currentTime;
+
+    [Header("Gei variables")]
+    [SerializeField] TextMeshProUGUI gei;
+    [SerializeField] Image ozono;
 
     [Header("Temperature variables")]
     [SerializeField] Slider temperature;
@@ -88,6 +93,16 @@ public class CanvasHandler : MonoBehaviour
         GameManager.Instance.pauseMode = false;
         fadeManager.FadeOut();
     }
-    public void UpdateTemperature(float number)=>
+    public void UpdateTemperature(float number)
+    {
+        int numberGei = 0;
+        int.TryParse(gei.text, out numberGei);
+
+        gei.text = ""+(numberGei + number * 20);
         temperature.value = Mathf.Clamp(number + temperature.value, 0, 1);
+
+        var ozonoColor = ozono.color;
+        ozonoColor.a = Mathf.Clamp(number + temperature.value, 0.2f, 1);
+        ozono.color = ozonoColor;
+    }
 }

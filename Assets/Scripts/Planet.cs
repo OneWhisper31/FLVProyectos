@@ -8,9 +8,12 @@ public class Planet : MonoBehaviour
     [SerializeField] Transform[] posibleSpawns;
     [SerializeField] Building building;
 
+    [SerializeField] [Range(0, 1)] float speed;
+
     [Header("Debug Mode")]
     [SerializeField] bool debugMode;
     [Range(0,360)] [SerializeField] int degrees;//Debugmode
+
 
     Image image;
 
@@ -29,7 +32,7 @@ public class Planet : MonoBehaviour
         if (GameManager.Instance.pauseMode)
             return;
 
-        transform.Rotate(Vector3.forward * 0.02f);
+        transform.Rotate(Vector3.forward * speed);
     }
 
     private void OnDrawGizmos()

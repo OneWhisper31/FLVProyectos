@@ -417,37 +417,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialoges:
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+  - izqCharacter: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
+    derCharacter: {fileID: 21300000, guid: 79a12daa89800ff48832f048647d9347, type: 3}
     popUpDir: 0
     text: "\xA1Hola, Amira! \xBFHas o\xEDdo hablar de los Objetivos de Desarrollo
       Sostenible?"
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+  - izqCharacter: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
+    derCharacter: {fileID: 21300000, guid: 79a12daa89800ff48832f048647d9347, type: 3}
     popUpDir: 1
     text: "\xA1S\xED, claro! Son esos objetivos para hacer del mundo un lugar mejor,
       \xBFverdad?"
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+  - izqCharacter: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
+    derCharacter: {fileID: 21300000, guid: 79a12daa89800ff48832f048647d9347, type: 3}
     popUpDir: 0
     text: "Exacto, y hoy vamos a hablar sobre uno de ellos, el ODS 13: Acci\xF3n
       por el clima."
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+  - izqCharacter: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
+    derCharacter: {fileID: 21300000, guid: 79a12daa89800ff48832f048647d9347, type: 3}
     popUpDir: 1
     text: " \xA1Suena importante! \xBFEn qu\xE9 consiste?"
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+  - izqCharacter: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
+    derCharacter: {fileID: 21300000, guid: 79a12daa89800ff48832f048647d9347, type: 3}
     popUpDir: 0
     text: "El ODS 13 se trata de tomar medidas para combatir el cambio clim\xE1tico
       y sus efectos. Esto incluye fortalecer la resiliencia de los pa\xEDses ante
       los riesgos relacionados con el clima y desastres naturales."
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+  - izqCharacter: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
+    derCharacter: {fileID: 21300000, guid: 79a12daa89800ff48832f048647d9347, type: 3}
     popUpDir: 1
     text: " \xA1Suena como algo que todos debemos tomar en serio!"
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+  - izqCharacter: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
+    derCharacter: {fileID: 21300000, guid: 79a12daa89800ff48832f048647d9347, type: 3}
     popUpDir: 0
     text: "Exactamente \xA1Juntos podemos marcar la diferencia!"
   izqCharacter: {fileID: 1378392258690828801}
@@ -584,6 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8473907db8814469bd95fe4b1bbe82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAffectedByPauseMode: 1
   image: {fileID: 114769142516990489}
   intro: {fileID: 7572537186550766123}
 --- !u!1 &6203356414108892538
@@ -823,7 +824,7 @@ RectTransform:
   m_GameObject: {fileID: 7740388581092129552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -0.46967, y: 0.46967, z: 0.46967}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1466734652024066562}
@@ -831,7 +832,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1200, y: -148.3}
-  m_SizeDelta: {x: 482, y: 845}
+  m_SizeDelta: {x: 1000, y: 2209.2773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6394780959384700826
 CanvasRenderer:
@@ -861,7 +862,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1032,7 +1033,7 @@ RectTransform:
   m_GameObject: {fileID: 8608387417256677980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.61441094, y: 0.61441094, z: -0.61441094}
+  m_LocalScale: {x: 0.46967, y: 0.46967, z: 0.46967}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1466734652024066562}
@@ -1040,7 +1041,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 1200, y: -96.7}
-  m_SizeDelta: {x: 689, y: 1366}
+  m_SizeDelta: {x: 1000.1338, y: 2241}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7790139476441827705
 CanvasRenderer:
@@ -1070,7 +1071,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79a12daa89800ff48832f048647d9347, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

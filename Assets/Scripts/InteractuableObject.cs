@@ -98,9 +98,10 @@ public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IP
         if (!interacteable)
             return;
 
-        transform.localScale = initialScale;
-        StopAllCoroutines();
+        if (scaleAnims)
+            transform.localScale = initialScale;
 
+        StopAllCoroutines();
     }
     
 }
