@@ -36,6 +36,7 @@ public class FadeManager : MonoBehaviour
         color.a = 1;
         fadeout.color = color;
 
+        GameManager.Instance.pauseMode = false;
         SceneManager.LoadScene(nextScene.ToString());
     }
     IEnumerator _FadeIn()

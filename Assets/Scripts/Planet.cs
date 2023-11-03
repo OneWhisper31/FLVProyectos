@@ -8,7 +8,7 @@ public class Planet : MonoBehaviour
     [SerializeField] Transform[] posibleSpawns;
     [SerializeField] Building building;
 
-    [SerializeField] [Range(0, 1)] float speed;
+    [SerializeField] [Range(0, 10)] float speed;
 
     [Header("Debug Mode")]
     [SerializeField] bool debugMode;
@@ -20,6 +20,7 @@ public class Planet : MonoBehaviour
     private void Start()
     {
         image = GetComponent<Image>();
+        GameManager.Instance.ShuffleStructures();
 
         foreach (var item in posibleSpawns)
         {
@@ -32,7 +33,7 @@ public class Planet : MonoBehaviour
         if (GameManager.Instance.pauseMode)
             return;
 
-        transform.Rotate(Vector3.forward * speed);
+        transform.Rotate(Vector3.forward * speed*Time.deltaTime);
     }
 
     private void OnDrawGizmos()

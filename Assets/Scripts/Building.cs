@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class Building : InteractuableObject
 {
@@ -11,6 +12,8 @@ public class Building : InteractuableObject
     bool hasChange;
 
     public int value=-1;//es negativo o positivo? || puede ser -1 o 1 o 2
+
+    [SerializeField] Animator smokeAnim;
 
     private void Start()
     {
@@ -34,23 +37,36 @@ public class Building : InteractuableObject
         hasChange = true;
         disableAnims = true;//interactuableObject
 
+        smokeAnim.SetTrigger("play" + Random.Range(0, 2));
+
+        Sprite newSprite = default;
+
         switch (_value)
         {
             case Change.Positive1:
                 value = 1;
-                image.sprite= structureSelected.positive1.sprite;
+                newSprite= structureSelected.positive1.sprite;
                 break;
             case Change.Positive2:
-                image.sprite = structureSelected.positive2.sprite;
+                newSprite = structureSelected.positive2.sprite;
                 value = 2;
                 break;
             case Change.Negative:
-                image.sprite = structureSelected.negative.sprite;
+                newSprite = structureSelected.negative.sprite;
                 value = -1;
                 break;
             default:
                 break;
         }
+
+
+        transform.DOScale(0, 0.2f).OnComplete(()=> {
+
+            image.sprite = newSprite;
+            transform.DOScale(1, 0.3f);
+        });
+
+        
     }
 }
 [System.Serializable]

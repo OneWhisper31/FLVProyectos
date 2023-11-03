@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Clouds : MonoBehaviour
 {
-    [SerializeField][Range(0,1)] float speed;
+    [SerializeField] [Range(0, 10)] float speed;
 
     [SerializeField] ParticleSystem cloudsParticle;
 
@@ -17,6 +17,6 @@ public class Clouds : MonoBehaviour
             return;
         }
 
-        transform.Rotate(Vector3.forward * speed);
+        transform.Rotate(Vector3.forward * speed*Time.deltaTime);
     }
 }

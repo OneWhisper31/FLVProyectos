@@ -113,6 +113,18 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    public void ShuffleStructures()
+    {
+        lastStructureIndex = 0;
+        for (int i = structures.Length - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            Structure temp = structures[i];
+            structures[i] = structures[j];
+            structures[j] = temp;
+        }
+
+    }
     public void OnDrawGizmos()
     {
         if (!debugMode)
