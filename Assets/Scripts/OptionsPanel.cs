@@ -13,12 +13,14 @@ public class OptionsPanel : MonoBehaviour
     public void EnableOptions(Building _buildingSelected)
     {
         buildingSelected = _buildingSelected;
+        GameManager.Instance.pauseMode = true;
 
         if(!IsOpen)
             transform.DOScale(1, 0.7f);
     }
     public void DisableOptions()
     {
+        GameManager.Instance.pauseMode = false;
         buildingSelected = null;
         transform.DOScale(0, 0.7f);
     }

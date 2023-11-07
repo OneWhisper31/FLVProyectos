@@ -13,6 +13,8 @@ public class DebugMode : MonoBehaviour
             LoadScene(1);
         else if (Input.GetKeyDown(KeyCode.Alpha3))
             LoadScene(2);
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+            LoadScene(3);
     }
     public void LoadScene(int index)
     {

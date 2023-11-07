@@ -287,13 +287,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 30
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 50
-  m_fontStyle: 1
+  m_fontSizeMax: 30
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1755,13 +1755,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 30
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 50
-  m_fontStyle: 1
+  m_fontSizeMax: 30
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1862,7 +1862,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mmm,  Incorrecto.
+  m_text: 'Mmm,  Incorrecto.
+
+    Volvelo a pensar.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
   m_sharedMaterial: {fileID: 6883945059828259780, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
@@ -1889,7 +1891,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
+  m_fontSize: 65.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2023,13 +2025,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 30
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 50
-  m_fontStyle: 1
+  m_fontSizeMax: 30
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2417,8 +2419,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.9988, y: -25.0007}
-  m_SizeDelta: {x: 544, y: 162.9969}
+  m_AnchoredPosition: {x: -16.433, y: -25.0007}
+  m_SizeDelta: {x: 637.14, y: 162.997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &7986625730508304719
 RectTransform:
@@ -2511,41 +2513,40 @@ MonoBehaviour:
   questions:
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
-    question: "\xBFCu\xE1l de los siguientes h\xE1bitos cotidianos puede ayudar a
-      reducir la huella de carbono?"
+    question: "\xBFComo podemos ayudar a reducir la huella de carbono?"
     answers:
-    - text: "Utilizar bolsas de pl\xE1stico desechables"
+    - text: "Utilizar bolsas de pl\xE1stico desechables."
       isTrue: 0
-    - text: "Tomar duchas largas todos los d\xEDas"
+    - text: "Tomar duchas largas todos los d\xEDas."
       isTrue: 0
-    - text: "Usar transporte p\xFAblico en lugar de conducir un autom\xF3vil"
+    - text: "Usar transporte p\xFAblico en lugar de conducir un autom\xF3vil."
       isTrue: 1
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
     question: "\xBFCu\xE1l de los siguientes h\xE1bitos contribuye a la conservaci\xF3n
       de energ\xEDa en el hogar?"
     answers:
-    - text: "Apagar los electrodom\xE9sticos cuando no est\xE1n en uso"
+    - text: "Apagar los electrodom\xE9sticos cuando no est\xE1n en uso."
       isTrue: 1
     - text: "Usar calentadores el\xE9ctricos en lugar de sistemas de calefacci\xF3n
-        central"
+        central."
       isTrue: 0
-    - text: Dejar correr el grifo de agua mientras te cepillas los dientes
+    - text: Dejar correr el agua mientras te cepillas los dientes.
       isTrue: 0
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
-    question: "\xBFC\xF3mo puedes contribuir a la protecci\xF3n de la biodiversidad
+    question: "\xBFC\xF3mo pod\xE9s contribuir a la protecci\xF3n de la biodiversidad
       y la conservaci\xF3n de los ecosistemas?"
     answers:
-    - text: "Participar en la tala de \xE1rboles"
+    - text: Usar las hojas solo una vez.
       isTrue: 0
-    - text: "Usar pesticidas fuertes en tu jard\xEDn"
+    - text: "Usar pesticidas fuertes en tu jard\xEDn."
       isTrue: 0
-    - text: Reducir, reutilizar y reciclar
+    - text: Reducir, reutilizar y reciclar.
       isTrue: 1
   - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
     derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
-    question: " \xBFQu\xE9 acci\xF3n puedes tomar para reducir la cantidad de residuos
+    question: " \xBFQu\xE9 acci\xF3n pod\xE9s tomar para reducir la cantidad de residuos
       pl\xE1sticos en el ambiente?"
     answers:
     - text: "Comprar productos envasados en pl\xE1stico de un solo uso"

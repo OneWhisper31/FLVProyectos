@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Trivia.unity
     guid: f58f28e864ec86f48a9ce7aed7806d6f
+  - enabled: 1
+    path: Assets/Scenes/ODS13_BuildingDebug.unity
+    guid: 7ec06a1dabbff6f449bb8e6757c83053
   m_configObjects: {}

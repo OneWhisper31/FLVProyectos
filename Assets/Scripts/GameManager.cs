@@ -95,6 +95,15 @@ public class GameManager : MonoBehaviour
         if (lastStructureIndex >= structures.Length)//start over
             ShuffleStructures(building.structureSelected);
     }
+    public void ReRollStructure(BuildingDebugMode building)
+    {
+        building.structureSelected = structures[lastStructureIndex];
+        building.image.sprite = structures[lastStructureIndex].initial;
+
+        lastStructureIndex++;
+        if (lastStructureIndex >= structures.Length)//start over
+            ShuffleStructures(building.structureSelected);
+    }
     public void ShuffleStructures(Structure structure)
     {
         lastStructureIndex = 0;
