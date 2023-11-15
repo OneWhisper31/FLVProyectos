@@ -59,13 +59,14 @@ public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IP
     }
     public virtual void OnPointerExit(PointerEventData eventData)
     {
+        StopAllCoroutines();
+
         if (disableAnims|| !interacteable)
             return;
 
         if (scaleAnims)
             transform.localScale = initialScale;
 
-        StopAllCoroutines();
         image.color = Color.white;
     }
     IEnumerator AnimAssetColor()
