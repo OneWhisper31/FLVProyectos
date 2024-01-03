@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Huella de carbono digital
+  m_EditorClassIdentifier: Assembly-CSharp::StructureSO
+  initial:
+    sprite: {fileID: 21300000, guid: 6d507afbfe015e94f9e5eba5ce95ac8f, type: 3}
+    icon: {fileID: 21300000, guid: 8957758f8624b8843a9cace663fcddae, type: 3}
+    hoverText: Dejar como esta actualmente.
+  positive1:
+    sprite: {fileID: 21300000, guid: e197ec7005369e94c830ddf4d3860d47, type: 3}
+    icon: {fileID: 21300000, guid: ed73462a1171e0c408c3c1bcac4d450b, type: 3}
+    hoverText: "Almacenamiento disminuido, disminuci\xF3n de email."
+  positive2:
+    sprite: {fileID: 21300000, guid: 905202849f115d748b08b159d6d32a3e, type: 3}
+    icon: {fileID: 21300000, guid: d653383526e4c464b9f86af653320e5b, type: 3}
+    hoverText: "Reparaci\xF3n de dispositivos digitales, menos emails, bono verde."
+  negative:
+    sprite: {fileID: 21300000, guid: 02ed9210c7328ea49afe89f571d8e80a, type: 3}
+    icon: {fileID: 21300000, guid: 18362e78e0ad77548ae7786e2b84d7e0, type: 3}
+    hoverText: Muchos servidores, personas con PCs que emiten muchos emails, pila
+      de chatarra digital.

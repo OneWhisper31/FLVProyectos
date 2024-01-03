@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Transporte
+  m_EditorClassIdentifier: Assembly-CSharp::StructureSO
+  initial:
+    sprite: {fileID: 21300000, guid: 536dc834ebc46b34e9fac828e407127b, type: 3}
+    icon: {fileID: 21300000, guid: 085f7d53d25cb2643b4edf53082ee6c0, type: 3}
+    hoverText: Dejar como esta actualmente.
+  positive1:
+    sprite: {fileID: 21300000, guid: 82f66c7348ffaa34892785a2c26c40da, type: 3}
+    icon: {fileID: 21300000, guid: 77af5b1e826ea2f4ea93ff4df68e1d5b, type: 3}
+    hoverText: Bicisenda.
+  positive2:
+    sprite: {fileID: 21300000, guid: 283fe25193542ff4e964486a919c328b, type: 3}
+    icon: {fileID: 21300000, guid: df02350eb7907364490098938de406cd, type: 3}
+    hoverText: "Transporte p\xFAblico."
+  negative:
+    sprite: {fileID: 21300000, guid: c01fc79e9e689fe48ba13140da21f901, type: 3}
+    icon: {fileID: 21300000, guid: 28ef3d42e0321f64ebfa820edd64a6c0, type: 3}
+    hoverText: "M\xE1s transporte con energ\xEDas f\xF3siles."

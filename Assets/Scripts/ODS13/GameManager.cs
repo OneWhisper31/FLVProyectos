@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public Structure[] structures;
+    public StructureSO[] structures;
     public int lastStructureIndex;
 
     public GameObject raylightPrefab;
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
     public void ReRollStructure(Building building)
     {
         building.structureSelected = structures[lastStructureIndex];
-        building.image.sprite = structures[lastStructureIndex].initial;
+        building.image.sprite = structures[lastStructureIndex].initial.sprite;
 
         lastStructureIndex++;
         if (lastStructureIndex >= structures.Length)//start over
@@ -98,25 +98,25 @@ public class GameManager : MonoBehaviour
     public void ReRollStructure(BuildingDebugMode building)
     {
         building.structureSelected = structures[lastStructureIndex];
-        building.image.sprite = structures[lastStructureIndex].initial;
+        building.image.sprite = structures[lastStructureIndex].initial.sprite;
 
         lastStructureIndex++;
         if (lastStructureIndex >= structures.Length)//start over
             ShuffleStructures(building.structureSelected);
     }
-    public void ShuffleStructures(Structure structure)
+    public void ShuffleStructures(StructureSO structure)
     {
         lastStructureIndex = 0;
         for (int i = structures.Length - 1; i > 0; i--)
         {
             int j = Random.Range(0, i + 1);
-            Structure temp = structures[i];
+            StructureSO temp = structures[i];
             structures[i] = structures[j];
             structures[j] = temp;
         }
-        if (structures[0].initial == structure.initial)
+        if (structures[0].initial.sprite == structure.initial.sprite)
         {//para que no se repitan dos veces seguidas
-            Structure temp = structures[0];
+            StructureSO temp = structures[0];
             structures[0] = structures[structures.Length - 1];
             structures[structures.Length - 1] = temp;
         }
@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
         for (int i = structures.Length - 1; i > 0; i--)
         {
             int j = Random.Range(0, i + 1);
-            Structure temp = structures[i];
+            StructureSO temp = structures[i];
             structures[i] = structures[j];
             structures[j] = temp;
         }

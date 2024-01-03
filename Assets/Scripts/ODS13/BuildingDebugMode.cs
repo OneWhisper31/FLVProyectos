@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class BuildingDebugMode : InteractuableObject
 {
-    public Structure structureSelected;
+    public StructureSO structureSelected;
 
     public int value=-1;//es negativo o positivo? || puede ser -1 o 1 o 2
 
@@ -24,7 +24,7 @@ public class BuildingDebugMode : InteractuableObject
         if (Input.GetKeyDown(KeyCode.RightArrow))
             GameManager.Instance.ReRollStructure(this);
         else if (Input.GetKeyDown(KeyCode.Q))
-            image.sprite= structureSelected.initial;
+            image.sprite= structureSelected.initial.sprite;
         else if(Input.GetKeyDown(KeyCode.W))
             image.sprite = structureSelected.positive1.sprite;
         else if (Input.GetKeyDown(KeyCode.E))

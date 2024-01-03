@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Industria
+  m_EditorClassIdentifier: Assembly-CSharp::StructureSO
+  initial:
+    sprite: {fileID: 21300000, guid: 7a0d8671dbe875b43bd2bfe61c22dc98, type: 3}
+    icon: {fileID: 21300000, guid: 25b099141854d60498919512ab4b0c89, type: 3}
+    hoverText: Dejar como esta actualmente.
+  positive1:
+    sprite: {fileID: 21300000, guid: 82d47d817b018124e996d16edb61272e, type: 3}
+    icon: {fileID: 21300000, guid: 75f89d4136aed6741979b0925e664e5a, type: 3}
+    hoverText: Bono verde.
+  positive2:
+    sprite: {fileID: 21300000, guid: 93db38f4b1c150a4d8384ddc7314bd26, type: 3}
+    icon: {fileID: 21300000, guid: 1660185ec7de8884885b5eeea3d74123, type: 3}
+    hoverText: Industrias Verdes.
+  negative:
+    sprite: {fileID: 21300000, guid: 9c0388927822be647a876564f20a4fd3, type: 3}
+    icon: {fileID: 21300000, guid: ce432a68d121ff24bb494d0cc2b532e2, type: 3}
+    hoverText: "M\xE1s cantidad de industrias sin tener en cuenta la contaminaci\xF3n."

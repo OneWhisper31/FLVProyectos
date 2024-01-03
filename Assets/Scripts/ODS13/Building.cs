@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Building : InteractuableObject
 {
-    public Structure structureSelected;
+    public StructureSO structureSelected;
 
     bool hasChange;
 
@@ -69,10 +69,11 @@ public class Building : InteractuableObject
         
     }
 }
-[System.Serializable]
-public struct Structure
+
+[CreateAssetMenu(fileName = "Structure", menuName = "ScriptableObjects/ODS13 - Structure", order = 1)]
+public class StructureSO : ScriptableObject
 {
-    public Sprite initial;//una cruz en todas
+    public SpriteStructure initial;
     public SpriteStructure positive1;
     public SpriteStructure positive2;
     public SpriteStructure negative;
@@ -81,6 +82,7 @@ public struct Structure
 public struct SpriteStructure
 {
     public Sprite sprite;
-    //public Sprite icon;
+    public Sprite icon;
+    public string hoverText;
 }
 

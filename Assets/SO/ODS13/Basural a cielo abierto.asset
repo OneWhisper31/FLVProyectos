@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Basural a cielo abierto
+  m_EditorClassIdentifier: Assembly-CSharp::StructureSO
+  initial:
+    sprite: {fileID: 21300000, guid: 1688b33ceb9b4ff4e81866c2d23e5d59, type: 3}
+    icon: {fileID: 21300000, guid: 9973f3917bc538747ba2e3c5eff9be05, type: 3}
+    hoverText: Dejar como esta actualmente.
+  positive1:
+    sprite: {fileID: 21300000, guid: a1f0ce68c4b14424e915d5ecd23480ad, type: 3}
+    icon: {fileID: 21300000, guid: 1fc3f4fd89e2e904497d41da884e9be8, type: 3}
+    hoverText: Personas separando en cestos y compostando.
+  positive2:
+    sprite: {fileID: 21300000, guid: 56e911eea5e9d35409b30019f4ff8780, type: 3}
+    icon: {fileID: 21300000, guid: 85114e6fb6a28ed4f88887c9e5638799, type: 3}
+    hoverText: Centro de Reciclaje y composta
+  negative:
+    sprite: {fileID: 21300000, guid: fac966348c67d0d499cfeb3716daa586, type: 3}
+    icon: {fileID: 21300000, guid: 4765b1c32a6f87149afdfef2f5f4c1e1, type: 3}
+    hoverText: Quemar la basura.

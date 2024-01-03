@@ -697,76 +697,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structures:
-  - initial: {fileID: 21300000, guid: a1f0ce68c4b14424e915d5ecd23480ad, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: 56e911eea5e9d35409b30019f4ff8780, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: 6b8c1db519e1f4246a1689f89f73a59c, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: b7bde1345ce137e40b0c68dfe7b72814, type: 3}
-  - initial: {fileID: 21300000, guid: 1688b33ceb9b4ff4e81866c2d23e5d59, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: a1f0ce68c4b14424e915d5ecd23480ad, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: 56e911eea5e9d35409b30019f4ff8780, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: fac966348c67d0d499cfeb3716daa586, type: 3}
-  - initial: {fileID: 21300000, guid: 05520c668ebee5a479577c6735f6b0ec, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: 072963ac075db6b4a827d7617b51caf2, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: 66ac271dce0eab446a439ac6871ce4fe, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: c66a4f50e3859e446a3b3dfe2a2bcfa4, type: 3}
-  - initial: {fileID: 21300000, guid: 536dc834ebc46b34e9fac828e407127b, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: 82f66c7348ffaa34892785a2c26c40da, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: 283fe25193542ff4e964486a919c328b, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: c01fc79e9e689fe48ba13140da21f901, type: 3}
-  - initial: {fileID: 21300000, guid: 8a37b33e74308fc4ba804afa5463d288, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: 072963ac075db6b4a827d7617b51caf2, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: 66ac271dce0eab446a439ac6871ce4fe, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: 8b9b1bac1ebb5fd44928721abbc0adaa, type: 3}
-  - initial: {fileID: 21300000, guid: c41000a046af61545b2db7968afa75f0, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: 757c535f389671a4cb1ccdfa670e5d20, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: 4906a57f653de1648bbeb721f0b019a0, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: 906c7c77fd8a65041b26886ea4c14b49, type: 3}
-  - initial: {fileID: 21300000, guid: 7a0d8671dbe875b43bd2bfe61c22dc98, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: 93db38f4b1c150a4d8384ddc7314bd26, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: 82d47d817b018124e996d16edb61272e, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: 9c0388927822be647a876564f20a4fd3, type: 3}
-  - initial: {fileID: 21300000, guid: 860157b65f47d634dbe8bdfd04ce194a, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: ab84622fd83f05c47985289638734ea4, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: 2e2091fc3a0d82f49a6338873e4ac671, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: f9441bb6470caeb49a805e1912ab12d1, type: 3}
-  - initial: {fileID: 21300000, guid: 908322384a479e042b5d62f0ebbc7648, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: de4547c74a85b0f4bab516ef19c39627, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: 9de3b1ba7c6bd2f40a76d17f6c5ca72b, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: f9441bb6470caeb49a805e1912ab12d1, type: 3}
-  - initial: {fileID: 21300000, guid: 528855b5e41ff4447b3497d7158ff6ba, type: 3}
-    positive1:
-      sprite: {fileID: 21300000, guid: e6249ce8ee5e4cf46800169d69a02806, type: 3}
-    positive2:
-      sprite: {fileID: 21300000, guid: b84d92c880df81e4083ab4abe0eb75e1, type: 3}
-    negative:
-      sprite: {fileID: 21300000, guid: 15f4a66ac8e1a134ab58f0cb2ce48316, type: 3}
+  - {fileID: 11400000, guid: 77c8111b1ffd683429191650c21ba046, type: 2}
+  - {fileID: 11400000, guid: 0cd3b3caf46ee6a49ab75fb53588958c, type: 2}
+  - {fileID: 11400000, guid: 4be172382914d5a438b51ef7a9fbbd5d, type: 2}
+  - {fileID: 11400000, guid: c96f895330693f24e8327ccdf3540247, type: 2}
+  - {fileID: 11400000, guid: 7e2ccad836b8515458596de49fc03f3b, type: 2}
+  - {fileID: 11400000, guid: 0f0960c1e41eb414789bd35f727b1987, type: 2}
+  - {fileID: 11400000, guid: 1fe1926f14e98e24693b78690a873010, type: 2}
+  - {fileID: 11400000, guid: 921ee9129dc7fe14bb5878a8253eb408, type: 2}
   lastStructureIndex: 0
   raylightPrefab: {fileID: 8550268206901463885, guid: 5cc7d3c30d66a7b4682618eddc5808b8, type: 3}
   geiLimitX: 52
