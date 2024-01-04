@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public CanvasHandler canvasHandler;
+
     public StructureSO[] structures;
     public int lastStructureIndex;
 
@@ -85,7 +87,19 @@ public class GameManager : MonoBehaviour
         obj.transform.localScale = Vector3.zero;
         obj.transform.DOScale(currentScale + Random.Range(0f, 0.2f), 2);
     }
+    public void DelayReRollStructure(Building building, int delaySec)
+        => StartCoroutine(delayReRollStructure(building, delaySec));
+    IEnumerator delayReRollStructure(Building building, int delaySec)
+    {
+        StopAllCoroutines();
+        if(pauseMode)
+            yield return new WaitUntil(() => !pauseMode);
 
+        yield return new WaitForSeconds(delaySec);
+
+        building.ResetButton();
+        ReRollStructure(building);
+    }
     public void ReRollStructure(Building building)
     {
         building.structureSelected = structures[lastStructureIndex];

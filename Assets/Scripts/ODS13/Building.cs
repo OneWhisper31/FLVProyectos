@@ -11,7 +11,7 @@ public class Building : InteractuableObject
 
     bool hasChange;
 
-    public int value=-1;//es negativo o positivo? || puede ser -1 o 1 o 2
+    //public int value=-1;//es negativo o positivo? || puede ser -1 o 1 o 2
 
     [SerializeField] Animator smokeAnim;
 
@@ -21,7 +21,11 @@ public class Building : InteractuableObject
         transform.DOScale(1, 0.2f);
         scaleAnims = false;
     }
-
+    public void ResetButton()
+    {
+        hasChange = false;
+        disableAnims = false;
+    }
     public override void OnPointerClick(PointerEventData eventData)
     {
         base.OnPointerClick(eventData);
@@ -41,6 +45,8 @@ public class Building : InteractuableObject
 
         Sprite newSprite = default;
 
+        int value = 0;
+
         switch (_value)
         {
             case Change.Positive1:
@@ -58,7 +64,8 @@ public class Building : InteractuableObject
             default:
                 break;
         }
-
+        GameManager.Instance.canvasHandler.UpdateTemperature(-0.05f * value);
+        GameManager.Instance.DelayReRollStructure(this, 10);
 
         transform.DOScale(0, 0.2f).OnComplete(()=> {
 
@@ -66,7 +73,6 @@ public class Building : InteractuableObject
             transform.DOScale(1, 0.3f);
         });
 
-        
     }
 }
 

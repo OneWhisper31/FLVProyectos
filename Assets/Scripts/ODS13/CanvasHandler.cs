@@ -41,6 +41,9 @@ public class CanvasHandler : MonoBehaviour
     }
     private void Update()
     {
+        if (GameManager.Instance.pauseMode)
+            return;
+
         currentTime += Time.deltaTime;
 
         if (currentTime >= secondsPerYear)

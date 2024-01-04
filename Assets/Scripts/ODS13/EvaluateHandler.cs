@@ -27,7 +27,7 @@ public class EvaluateHandler : MonoBehaviour
             if (building == optionsPanel.CurrentBuilding)
                 optionsPanel.DisableOptions();
 
-            canvasHandler.UpdateTemperature(-0.05f * building.value);
+            //canvasHandler.UpdateTemperature(-0.05f * building.value);
         }
     }
 }
