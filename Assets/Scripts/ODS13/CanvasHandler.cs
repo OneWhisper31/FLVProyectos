@@ -13,6 +13,7 @@ public class CanvasHandler : MonoBehaviour
     [SerializeField] int yearsFinal = 2030;
     [SerializeField] int gametimeSeconds = 300;
     [SerializeField] TextMeshProUGUI years;
+    [SerializeField] Slider yearsSlider;
 
     int secondsPerYear;
     int currentYear;
@@ -61,6 +62,8 @@ public class CanvasHandler : MonoBehaviour
         currentYear++;
         currentTime = 0;
         years.text = currentYear + "";
+        Debug.Log((float)(currentYear - yearsInitial) / (yearsFinal - yearsInitial));
+        yearsSlider.value = (float)(currentYear - yearsInitial) / (yearsFinal - yearsInitial);//deltaYearsPasados-deltayears
 
         if (currentYear == yearsFinal)
             EndGame();

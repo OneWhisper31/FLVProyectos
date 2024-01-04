@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 18, y: 150}
   m_SizeDelta: {x: 1005, y: 292}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8049896705724006329
@@ -300,8 +300,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4284296477
+  m_fontColor: {r: 0.1137255, g: 0.1764706, b: 0.3647059, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -620,7 +620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: -55, y: -150}
   m_SizeDelta: {x: 1005, y: 292}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5553324480465111492
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\xA1Hola, Amira! \xBFO\xEDste hablar de los Objetivos de Desarrollo Sostenible(ODS)?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
   m_sharedMaterial: {fileID: 6883945059828259780, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
@@ -735,8 +735,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4284296477
+  m_fontColor: {r: 0.1137255, g: 0.1764706, b: 0.3647059, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -944,8 +944,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4284296477
+  m_fontColor: {r: 0.1137255, g: 0.1764706, b: 0.3647059, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
