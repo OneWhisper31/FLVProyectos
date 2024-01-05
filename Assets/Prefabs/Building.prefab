@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -190,15 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAffectedByPauseMode: 1
   image: {fileID: 3307227277310105422}
-  structureSelected:
-    initial: {fileID: 0}
-    positive1:
-      sprite: {fileID: 0}
-    positive2:
-      sprite: {fileID: 0}
-    negative:
-      sprite: {fileID: 0}
-  value: -1
+  structureSelected: {fileID: 0}
   smokeAnim: {fileID: 3382825616609282469}
 --- !u!61 &2220665559749062521
 BoxCollider2D:

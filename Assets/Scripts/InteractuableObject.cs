@@ -27,6 +27,8 @@ public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IP
     public Image image;
     protected Vector3 initialScale;
 
+
+
     private void Awake()
     {
         image = GetComponent<Image>();
@@ -35,6 +37,8 @@ public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IP
 
     public virtual void OnPointerDown(PointerEventData eventData)
     {
+        StopAllCoroutines();
+
         if (disableAnims||!interacteable)
             return;
 
@@ -42,6 +46,8 @@ public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IP
     }
     public virtual void OnPointerUp(PointerEventData eventData)
     {
+        StopAllCoroutines();
+
         if (disableAnims || !interacteable)
             return;
 
@@ -49,6 +55,8 @@ public abstract class InteractuableObject : MonoBehaviour, IPointerUpHandler, IP
     }
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
+        StopAllCoroutines();
+
         if (disableAnims||!interacteable)
             return;
 

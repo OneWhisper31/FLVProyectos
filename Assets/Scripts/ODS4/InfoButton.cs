@@ -47,7 +47,7 @@ public class InfoButton : InteractuableObject
     {
         StopAllCoroutines();
         descriptionTextArea.DOScale(0, 0.5f);
-        base.OnPointerEnter(eventData);
+        base.OnPointerExit(eventData);
 
     }
     public override void OnPointerClick(PointerEventData eventData)

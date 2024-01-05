@@ -62,7 +62,7 @@ public class CanvasHandler : MonoBehaviour
         currentYear++;
         currentTime = 0;
         years.text = currentYear + "";
-        Debug.Log((float)(currentYear - yearsInitial) / (yearsFinal - yearsInitial));
+        //Debug.Log((float)(currentYear - yearsInitial) / (yearsFinal - yearsInitial));
         yearsSlider.value = (float)(currentYear - yearsInitial) / (yearsFinal - yearsInitial);//deltaYearsPasados-deltayears
 
         if (currentYear == yearsFinal)
