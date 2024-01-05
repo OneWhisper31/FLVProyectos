@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         => StartCoroutine(delayReRollStructure(building, delaySec));
     IEnumerator delayReRollStructure(Building building, int delaySec)
     {
-        StopAllCoroutines();
+        //StopAllCoroutines();
         if(pauseMode)
             yield return new WaitUntil(() => !pauseMode);
 
