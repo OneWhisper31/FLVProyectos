@@ -128,7 +128,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 6.2, y: 9.87, z: 6.2, w: 9.87}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -226,9 +226,6 @@ MonoBehaviour:
   isAffectedByPauseMode: 0
   image: {fileID: 148911378711403286}
   value: 0
-  description: 'opa
-
-'
 --- !u!1 &8385639623514755341
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 135.45}
+  m_AnchoredPosition: {x: 0, y: 180.6}
   m_SizeDelta: {x: 484.36, y: 174.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3797172767514770145
