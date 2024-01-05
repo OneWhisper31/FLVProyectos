@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     => StartCoroutine(SpawnGEI());
 
+    public void ChangePause(bool newPauseMode) 
+        => pauseMode = newPauseMode;
+
     public IEnumerator SpawnGEI()
     {
         for (int i = 0; i < initalGei; i++)

@@ -9,6 +9,7 @@ public class FadeManager : MonoBehaviour
     [SerializeField] Image fadeout;
 
     [SerializeField] bool initialFadeIn;
+    [SerializeField] bool initialPause;
 
     [SerializeField] Scenes nextScene;
 
@@ -16,6 +17,8 @@ public class FadeManager : MonoBehaviour
     {
         if (initialFadeIn)
             FadeIn();
+        if (initialPause)
+            GameManager.Instance.pauseMode = true;
     }
 
     public void FadeIn()=> StartCoroutine(_FadeIn());
