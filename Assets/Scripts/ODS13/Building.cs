@@ -75,15 +75,6 @@ public class Building : InteractuableObject
 
     }
 }
-
-[CreateAssetMenu(fileName = "Structure", menuName = "ScriptableObjects/ODS13 - Structure", order = 1)]
-public class StructureSO : ScriptableObject
-{
-    public SpriteStructure initial;
-    public SpriteStructure positive1;
-    public SpriteStructure positive2;
-    public SpriteStructure negative;
-}
 [System.Serializable]
 public struct SpriteStructure
 {

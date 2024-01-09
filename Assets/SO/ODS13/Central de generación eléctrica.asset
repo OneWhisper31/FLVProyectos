@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: fd0f09589886b6e498ad2fc88ffc95d4, type: 3}
   m_Name: "Central de generaci\xF3n el\xE9ctrica"
   m_EditorClassIdentifier: Assembly-CSharp::StructureSO
   initial:
@@ -27,4 +27,4 @@ MonoBehaviour:
   negative:
     sprite: {fileID: 21300000, guid: 906c7c77fd8a65041b26886ea4c14b49, type: 3}
     icon: {fileID: 21300000, guid: e861b42b398f9524da024b39a92a85e3, type: 3}
-    hoverText: "M\xE1s extracci\xF3n de petr\xF3leo."
+    hoverText: "Extracci\xF3n de petr\xF3leo."

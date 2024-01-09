@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: fd0f09589886b6e498ad2fc88ffc95d4, type: 3}
   m_Name: Mineria a cielo abierto
   m_EditorClassIdentifier: Assembly-CSharp::StructureSO
   initial:
@@ -19,11 +19,11 @@ MonoBehaviour:
   positive1:
     sprite: {fileID: 21300000, guid: 9de3b1ba7c6bd2f40a76d17f6c5ca72b, type: 3}
     icon: {fileID: 21300000, guid: 7fa254e962fa7014f91e71e42d6d2c6e, type: 3}
-    hoverText: "Crear propias fuentes de energ\xEDa renovable."
+    hoverText: "Crear propias fuentes de energ\xEDa renovable"
   positive2:
     sprite: {fileID: 21300000, guid: de4547c74a85b0f4bab516ef19c39627, type: 3}
     icon: {fileID: 21300000, guid: e8d0bac4172e4f74480d968bb2542997, type: 3}
-    hoverText: Capacitaciones ambientales.
+    hoverText: Capacitaciones ambientales
   negative:
     sprite: {fileID: 21300000, guid: 5b6fa9dfa8ff6b9478964321f8d05fcb, type: 3}
     icon: {fileID: 21300000, guid: 3c3fcbcc453f60f4d9f655b23f61b483, type: 3}

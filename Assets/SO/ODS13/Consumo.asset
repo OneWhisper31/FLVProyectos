@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: fd0f09589886b6e498ad2fc88ffc95d4, type: 3}
   m_Name: Consumo
   m_EditorClassIdentifier: Assembly-CSharp::StructureSO
   initial:
@@ -23,7 +23,7 @@ MonoBehaviour:
   positive2:
     sprite: {fileID: 21300000, guid: b84d92c880df81e4083ab4abe0eb75e1, type: 3}
     icon: {fileID: 21300000, guid: bdded661fd3849841b1c94861a8007c6, type: 3}
-    hoverText: "Comercio y Autoproducci\xF3n (huerta y granja)."
+    hoverText: "Autoproducci\xF3n (huerta y granja)."
   negative:
     sprite: {fileID: 21300000, guid: 15f4a66ac8e1a134ab58f0cb2ce48316, type: 3}
     icon: {fileID: 21300000, guid: 78f535d0cf1a7de4cbfe02d95b596a64, type: 3}
