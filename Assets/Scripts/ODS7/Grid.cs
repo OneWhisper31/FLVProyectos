@@ -40,12 +40,18 @@ public class Grid : MonoBehaviour
         cells = new Cell[height * width].Select(x => {
             int pos = i + j * width;
 
-            Cell _cell = Instantiate(cell, pivot.position + new Vector3(i * 57, j * 57, 0), Quaternion.identity, pivot)
+            Cell _cell = Instantiate(cell, pivot.position + new Vector3(i *11, j *11, 0), Quaternion.identity, pivot)
                 .GetComponent<Cell>().SetValue();
             _cell.name += pos;//diferenciacion
+            _cell.pos = Tuple.Create(i, j);//le da su posicion
 
-            if ((i == 0 && j == 1) || (i > width - 2 && j == 1))
-            {//initial cells
+            if (i == 0 && j == 1)
+            {//start cell
+                //_cell.endEnergy = new int[] {2};//termina en derecha
+                _cell.SetValue(GameManagerODS7.gm.cellSprites[0], true);
+            }
+            else if(i > width - 2 && j == 1)
+            {//end cell
                 _cell.SetValue(GameManagerODS7.gm.cellSprites[0], true);
             }
             else
@@ -73,6 +79,7 @@ public class Grid : MonoBehaviour
                     }
                 }
             }
+
             i++;
             if (i > width - 1)
             {
@@ -83,6 +90,13 @@ public class Grid : MonoBehaviour
             return _cell;
 
         }).ToArray();
+
+
+        //una vez que esta establecido el array, chequea vecinos
+        foreach (var _cell in cells)
+            _cell.neighborhood = CheckNeighborhood(_cell.pos.Item1,_cell.pos.Item2);
+
+        cells[1].GetPowered(0);//ya todos tienen sus vecinos, arranca la energia por la izq
     }
     public void CheckChange()
     {
@@ -91,19 +105,57 @@ public class Grid : MonoBehaviour
         if (cellsPressed.Count() >= 2)
         {
 
-            var cell1Position = cellsPressed.First().transform.localPosition;
-            var cell2Position = cellsPressed.Last().transform.localPosition;
+            //recalcula los cambiados
+            //first.neighborhood = CheckNeighborhood(first.pos.Item1, first.pos.Item2);
+            //last.neighborhood = CheckNeighborhood(last.pos.Item1, last.pos.Item2);
 
+            var first = cellsPressed.First();
+            var last = cellsPressed.Last();
 
-            cellsPressed.First().transform.localPosition = cell2Position;
-            cellsPressed.Last().transform.localPosition = cell1Position;
+            //guarda referencia del SO
+            var firstSO = first.cellSO;
+            var lastSO = last.cellSO;
+
+            first.SetNewSO(lastSO);
+            last.SetNewSO(firstSO);
 
             foreach (var item in cellsPressed)
                 item.OnPressed = false;
+
+            //recalcular afectados indirectos || esto quizas habria que modificarlo
+            foreach (var item in cells)
+                item.neighborhood=CheckNeighborhood(item.pos.Item1, item.pos.Item2);
         }
     }
-    public void CheckNeighborhood(int i, int y)
-    {
 
+    public Tuple<Cell,int>[] CheckNeighborhood(int i, int y)
+    {
+        List<Tuple<Cell, int>> neighborhoodCells = new List<Tuple<Cell,int>> ();
+
+        Cell _cell = cells[i + y * width];
+
+        //las comprobaciones para saber si son vecinos o no son las siguientes
+        //el indice es menor a 0? el indice es mayor a el tamaño del array?
+        //Tiene una abertura disponible?el vecino tiene abertura disponible?
+
+        if (NeighborhoodChecker(_cell,i - 1 + y * width,0,2))
+            neighborhoodCells.Add(Tuple.Create(cells[i - 1 + y * width],2));
+        if(NeighborhoodChecker(_cell,i + (y + 1) * width,1,3))
+            neighborhoodCells.Add(Tuple.Create(cells[i + (y + 1) * width],3));
+        if (NeighborhoodChecker(_cell, i + 1 + y * width, 2, 0))
+            neighborhoodCells.Add(Tuple.Create(cells[i + 1 + y * width],0));
+        if (NeighborhoodChecker(_cell, i + (y - 1) * width, 3, 1))
+            neighborhoodCells.Add(Tuple.Create(cells[i + (y - 1) * width],1));
+
+        //Debug.Log("Soy " + _cell.name);
+        //foreach (var item in neighborhoodCells)
+        //{
+        //    Debug.Log("Soy vecino " + item.Item1.name);
+        //}
+        //
+        return neighborhoodCells.ToArray();
     }
+
+    bool NeighborhoodChecker(Cell _cell, int index, int arrayEnterEnergy, int otherArrayEnterEnergy)
+        => index >= 0 && index < height * width && _cell.cellSO.enterEnergy[arrayEnterEnergy] && cells[index].cellSO.enterEnergy[otherArrayEnterEnergy];
 }

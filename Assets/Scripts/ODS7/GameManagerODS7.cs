@@ -18,4 +18,6 @@ public class GameManagerODS7 : MonoBehaviour
         else
             Destroy(this.gameObject);
     }
+    //public Cell[] CheckNeighborhood(int x, int y)
+    //    => grid.CheckNeighborhood(x, y);
 }

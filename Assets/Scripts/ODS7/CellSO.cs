@@ -6,6 +6,6 @@ using UnityEngine;
 public class CellSO : ScriptableObject
 {
     public Sprite sprite;
-    [Tooltip("Puede tener cuatro cifras que van del 1 a 0, 0 significa cerrado 1 abierto. El orden es: Izq,Arr,Der,Aba")]
+    [Tooltip("flase significa cerrado y 1 abierto. El orden es: Izq,Arr,Der,Aba")]
     public bool[] enterEnergy;
 }
