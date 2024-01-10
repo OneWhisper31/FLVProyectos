@@ -14,7 +14,7 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
     Grid grid { get => GameManagerODS7.gm.grid; }
     CellColors cellColors { get => GameManagerODS7.gm.grid.cellColors; }
 
-    [HideInInspector] public CellSO cellSO;
+    public CellSO cellSO;
     [HideInInspector] public Tuple<Cell,int>[] neighborhood;//Cell y por donde va a recibir la energia el sig: 0izq,1arr,2der,3aba
     public Tuple<int, int> pos;
 
@@ -23,7 +23,7 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
 
     Image image;
     bool pressed;
-    bool solved;
+    public bool visible;
 
 
     private void Awake()
@@ -31,13 +31,14 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         image = GetComponent<Image>();
     }
 
-    public Cell SetValue(CellSO _typeOfSprite=null, bool isVisible =false)
+    public Cell SetValue(CellSO _typeOfSprite=null, bool _isVisible =false)
     {
         cellSO = (_typeOfSprite == null ? GameManagerODS7.gm.cellSprites[Random.Range(0, GameManagerODS7.gm.cellSprites.Length-1)]: null);
 
-        if (isVisible)
+        if (_isVisible)
         {
-            solved = true;
+            visible = true;
+            visible = true;
             locked = true;
 
             if (cellSO == null)
@@ -50,7 +51,7 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
     }
     public Cell SetBattery()
     {
-        solved = true;
+        visible = true;
         locked = true;
 
         cellSO = GameManagerODS7.gm.battery;
@@ -69,18 +70,24 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
 
     public void GetPowered(int _start)
     {
+        if (!visible)
+            return;
+        if (hasEnergy)
+            return;
+
+        image.color = cellColors.normalColor;
         locked = true;
         hasEnergy = true;
         startEnergy = _start;
-        var neighTargets = neighborhood.Where(x => x.Item2 != _start);//filtrar para los que ya tienen energia
 
         //temporal para testear
-        StartCoroutine(navegating(neighTargets.ToArray()));
+        StartCoroutine(navegating());
     }
-    IEnumerator navegating(Tuple<Cell,int>[] neigh)
+    IEnumerator navegating()
     {
         yield return new WaitForSeconds(10);
-        foreach (var item in neigh)
+        Debug.Log("intento dar energia");
+        foreach (var item in neighborhood)
         {
             Debug.Log("di energia a " + item.Item1.name);
             item.Item1.GetPowered(item.Item2);
@@ -92,14 +99,16 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         if (locked)
             return;
 
-        if (solved)
+        if (visible)
         {
             OnPressed = !OnPressed;
             grid.CheckChange();
         }
         else
         {
-            solved = true;
+            visible = true;
+
+            GameManagerODS7.gm.grid.RecalculateNeighborhood();
 
             if (cellSO ==null)
                 cellSO = GameManagerODS7.gm.cellSprites[0];

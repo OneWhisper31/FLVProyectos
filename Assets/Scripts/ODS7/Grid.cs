@@ -40,18 +40,14 @@ public class Grid : MonoBehaviour
         cells = new Cell[height * width].Select(x => {
             int pos = i + j * width;
 
-            Cell _cell = Instantiate(cell, pivot.position + new Vector3(i *11, j *11, 0), Quaternion.identity, pivot)
+            Cell _cell = Instantiate(cell, pivot.position + new Vector3(i *57/*11*/, j *57, 0), Quaternion.identity, pivot)
                 .GetComponent<Cell>().SetValue();
             _cell.name += pos;//diferenciacion
             _cell.pos = Tuple.Create(i, j);//le da su posicion
 
-            if (i == 0 && j == 1)
-            {//start cell
+            if ((i == 0 && j == 1)|| (i > width - 2 && j == 1))
+            {//start cell or end cell
                 //_cell.endEnergy = new int[] {2};//termina en derecha
-                _cell.SetValue(GameManagerODS7.gm.cellSprites[0], true);
-            }
-            else if(i > width - 2 && j == 1)
-            {//end cell
                 _cell.SetValue(GameManagerODS7.gm.cellSprites[0], true);
             }
             else
@@ -96,7 +92,7 @@ public class Grid : MonoBehaviour
         foreach (var _cell in cells)
             _cell.neighborhood = CheckNeighborhood(_cell.pos.Item1,_cell.pos.Item2);
 
-        cells[1].GetPowered(0);//ya todos tienen sus vecinos, arranca la energia por la izq
+        cells[11].GetPowered(0);//ya todos tienen sus vecinos, arranca la energia por la izq
     }
     public void CheckChange()
     {
@@ -123,21 +119,21 @@ public class Grid : MonoBehaviour
                 item.OnPressed = false;
 
             //recalcular afectados indirectos || esto quizas habria que modificarlo
-            foreach (var item in cells)
-                item.neighborhood=CheckNeighborhood(item.pos.Item1, item.pos.Item2);
+            RecalculateNeighborhood();
         }
     }
 
+    public void RecalculateNeighborhood()
+    {
+        foreach (var item in cells)
+            item.neighborhood = CheckNeighborhood(item.pos.Item1, item.pos.Item2);
+    }
     public Tuple<Cell,int>[] CheckNeighborhood(int i, int y)
     {
         List<Tuple<Cell, int>> neighborhoodCells = new List<Tuple<Cell,int>> ();
 
         Cell _cell = cells[i + y * width];
-
-        //las comprobaciones para saber si son vecinos o no son las siguientes
-        //el indice es menor a 0? el indice es mayor a el tamaño del array?
-        //Tiene una abertura disponible?el vecino tiene abertura disponible?
-
+        //neighborchecker se encarga de hacer las comprobaciones, el desgloce esta en la funcion
         if (NeighborhoodChecker(_cell,i - 1 + y * width,0,2))
             neighborhoodCells.Add(Tuple.Create(cells[i - 1 + y * width],2));
         if(NeighborhoodChecker(_cell,i + (y + 1) * width,1,3))
@@ -156,6 +152,29 @@ public class Grid : MonoBehaviour
         return neighborhoodCells.ToArray();
     }
 
+
+    /// <summary>
+    /// las comprobaciones para saber si son vecinos o no son las siguientes
+    ///  el indice es menor a 0? el indice es mayor a el tamaño del array?
+    ///  Tiene una abertura disponible?el vecino tiene abertura disponible?
+    ///  es visible? tiene energia?
+    ///  esta en distinta fila pero tiene misma columna?(para que no de energia del otro lado del tablero)
+    /// <returns></returns>
+    /// </summary>
+    /// <param name="_cell">celda con energia</param>
+    /// <param name="index">indice de la celda con energia</param>
+    /// <param name="arrayEnterEnergy">tiene lugares por donde salir la energia?(celda con energia)</param>
+    /// <param name="otherArrayEnterEnergy">tiene lugares por donde salir la energia?(celda sin energia)</param>
+    /// <returns></returns>
     bool NeighborhoodChecker(Cell _cell, int index, int arrayEnterEnergy, int otherArrayEnterEnergy)
-        => index >= 0 && index < height * width && _cell.cellSO.enterEnergy[arrayEnterEnergy] && cells[index].cellSO.enterEnergy[otherArrayEnterEnergy];
+        => index >= 0 && index < height * width &&
+        _cell.cellSO.enterEnergy[arrayEnterEnergy] && cells[index].cellSO.enterEnergy[otherArrayEnterEnergy]
+        && cells[index].visible && !cells[index].hasEnergy
+        && (
+            (cells[index].pos.Item1+1) % width != 0
+            && (_cell.pos.Item1+1) % width != 0
+        )
+          ;//||
+            //((_cell.pos.Item1 + 1) % width != 0
+            //&& cells[index].pos.Item1 % width != 0));
 }
