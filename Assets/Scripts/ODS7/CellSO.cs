@@ -8,4 +8,6 @@ public class CellSO : ScriptableObject
     public Sprite sprite;
     [Tooltip("flase significa cerrado y 1 abierto. El orden es: Izq,Arr,Der,Aba")]
     public bool[] enterEnergy;
+    public string enterKeyAnim;
+    public string exitKeyAnim;
 }

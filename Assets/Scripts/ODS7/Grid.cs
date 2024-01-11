@@ -13,7 +13,9 @@ public class Grid : MonoBehaviour
     [SerializeField] GameObject cell;
     [SerializeField] Transform pivot;
 
-    Cell[] cells;
+    public Cell[] cells { get; private set; }
+    public Cell LastCell { get => width - 1 + 1 * width < cells.Length ? cells[width - 1 + 1 * width] : null; }
+    public bool CellsAnyGivingEnergy { get => cells.Any(x => x.isGivingPower); }
 
     [SerializeField] int maxBatteries;
 
@@ -40,11 +42,11 @@ public class Grid : MonoBehaviour
         cells = new Cell[height * width].Select(x => {
             int pos = i + j * width;
 
-            Cell _cell = Instantiate(cell, pivot.position + new Vector3(i *57/*11*/, j *57, 0), Quaternion.identity, pivot)
+            Cell _cell = Instantiate(cell, pivot.position + new Vector3(i */*57*/17, j *17, 0), Quaternion.identity, pivot)
                 .GetComponent<Cell>().SetValue();
             _cell.name += pos;//diferenciacion
             _cell.pos = Tuple.Create(i, j);//le da su posicion
-
+            
             if ((i == 0 && j == 1)|| (i > width - 2 && j == 1))
             {//start cell or end cell
                 //_cell.endEnergy = new int[] {2};//termina en derecha
@@ -118,7 +120,7 @@ public class Grid : MonoBehaviour
             foreach (var item in cellsPressed)
                 item.OnPressed = false;
 
-            //recalcular afectados indirectos || esto quizas habria que modificarlo
+            //recalcular tablero || esto deberia optimizarse en caso de problemas de rendimiento
             RecalculateNeighborhood();
         }
     }
@@ -143,12 +145,6 @@ public class Grid : MonoBehaviour
         if (NeighborhoodChecker(_cell, i + (y - 1) * width, 3, 1))
             neighborhoodCells.Add(Tuple.Create(cells[i + (y - 1) * width],1));
 
-        //Debug.Log("Soy " + _cell.name);
-        //foreach (var item in neighborhoodCells)
-        //{
-        //    Debug.Log("Soy vecino " + item.Item1.name);
-        //}
-        //
         return neighborhoodCells.ToArray();
     }
 
@@ -170,11 +166,9 @@ public class Grid : MonoBehaviour
         => index >= 0 && index < height * width &&
         _cell.cellSO.enterEnergy[arrayEnterEnergy] && cells[index].cellSO.enterEnergy[otherArrayEnterEnergy]
         && cells[index].visible && !cells[index].hasEnergy
-        && (
-            (cells[index].pos.Item1+1) % width != 0
-            && (_cell.pos.Item1+1) % width != 0
-        )
-          ;//||
-            //((_cell.pos.Item1 + 1) % width != 0
-            //&& cells[index].pos.Item1 % width != 0));
+        &&//son de la misma Y o son de distinta Y pero misma X
+        ((_cell.pos.Item2== cells[index].pos.Item2)
+        ||(_cell.pos.Item2 != cells[index].pos.Item2&& _cell.pos.Item1 == cells[index].pos.Item1));
+
+
 }
