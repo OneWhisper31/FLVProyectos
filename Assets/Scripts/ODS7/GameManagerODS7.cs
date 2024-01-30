@@ -6,7 +6,7 @@ public class GameManagerODS7 : MonoBehaviour
 {
     public static GameManagerODS7 gm;
 
-    public Grid grid;
+    public GridODS7 grid;
 
     public CellSO[] cellSprites;
     public CellSO battery;

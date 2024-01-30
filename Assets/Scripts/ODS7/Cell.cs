@@ -11,10 +11,25 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
 {
     public bool locked, hasEnergy, visible, isGivingPower;
     public bool OnPressed { get => pressed; set { pressed = value; image.color = pressed ? cellColors.pressedColor : cellColors.normalColor; } }
-    Grid grid { get => GameManagerODS7.gm.grid; }
+    GridODS7 grid { get => GameManagerODS7.gm.grid; }
     CellColors cellColors { get => GameManagerODS7.gm.grid.cellColors; }
 
-    public CellSO cellSO;
+    public Animator anim;
+    public Image sprite;
+
+    public CellSO cellSO
+    {
+        get => _cellSO;
+        set
+        {
+            _cellSO = value;
+            //anim.runtimeAnimatorController = _cellSO.animator;
+            sprite.sprite = _cellSO.sprite;
+        }
+    }
+    CellSO _cellSO;
+
+    public EnergySO _cells;
     [HideInInspector] public Tuple<Cell,int>[] neighborhood;//Cell y por donde va a recibir la energia el sig: 0izq,1arr,2der,3aba
     public Tuple<int, int> pos;
 

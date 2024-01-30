@@ -4,8 +4,9 @@ using UnityEngine;
 using System.Linq;
 using System;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
-public class Grid : MonoBehaviour
+public class GridODS7 : MonoBehaviour
 {
     public CellColors cellColors = new CellColors();
 
@@ -37,12 +38,13 @@ public class Grid : MonoBehaviour
                 false,//ya tiene una bateria ese rango?
                 -1));//columna(para comprobar que no esten en la misma)
 
-
+        
 
         cells = new Cell[height * width].Select(x => {
             int pos = i + j * width;
 
-            Cell _cell = Instantiate(cell, pivot.position + new Vector3(i */*57*/17, j *17, 0), Quaternion.identity, pivot)
+            Cell _cell 
+            = Instantiate(cell, pivot.position + new Vector3(i *Screen.width*0.065f, j * Screen.height * 0.11f, 0), Quaternion.identity, pivot)
                 .GetComponent<Cell>().SetValue();
             _cell.name += pos;//diferenciacion
             _cell.pos = Tuple.Create(i, j);//le da su posicion
@@ -93,8 +95,13 @@ public class Grid : MonoBehaviour
         //una vez que esta establecido el array, chequea vecinos
         foreach (var _cell in cells)
             _cell.neighborhood = CheckNeighborhood(_cell.pos.Item1,_cell.pos.Item2);
+    }
+    public void StartGame()
+    {//llamado cuando elije la energia, que da inicio al juego dando energia
+        //foreach (var cell in cells)
+        //    cell.GetComponent<Image>().raycastTarget = true;
 
-        cells[11].GetPowered(0);//ya todos tienen sus vecinos, arranca la energia por la izq
+        cells[11].GetPowered(0);//arranca la energia por la izq
     }
     public void CheckChange()
     {
@@ -135,7 +142,7 @@ public class Grid : MonoBehaviour
         List<Tuple<Cell, int>> neighborhoodCells = new List<Tuple<Cell,int>> ();
 
         Cell _cell = cells[i + y * width];
-        //neighborchecker se encarga de hacer las comprobaciones, el desgloce esta en la funcion
+        //neighborchecker se encarga de hacer las comprobaciones
         if (NeighborhoodChecker(_cell,i - 1 + y * width,0,2))
             neighborhoodCells.Add(Tuple.Create(cells[i - 1 + y * width],2));
         if(NeighborhoodChecker(_cell,i + (y + 1) * width,1,3))
