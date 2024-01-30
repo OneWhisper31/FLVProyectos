@@ -18,6 +18,4 @@ public class GameManagerODS7 : MonoBehaviour
         else
             Destroy(this.gameObject);
     }
-    //public void RecalculateNeighborhood()
-    //=> grid.RecalculateNeighborhood();
 }

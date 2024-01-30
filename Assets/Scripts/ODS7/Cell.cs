@@ -15,7 +15,9 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
     CellColors cellColors { get => GameManagerODS7.gm.grid.cellColors; }
 
     public Animator anim;
-    public Image sprite;
+    //public Image sprite;
+
+    public Sprite hideTubeSprite;
 
     public CellSO cellSO
     {
@@ -23,13 +25,14 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         set
         {
             _cellSO = value;
-            //anim.runtimeAnimatorController = _cellSO.animator;
-            sprite.sprite = _cellSO.sprite;
+            anim.runtimeAnimatorController = value.animator;
+            if(visible)
+                anim.SetTrigger("Open");
+            //image.sprite = value.sprite;
         }
     }
     CellSO _cellSO;
 
-    public EnergySO _cells;
     [HideInInspector] public Tuple<Cell,int>[] neighborhood;//Cell y por donde va a recibir la energia el sig: 0izq,1arr,2der,3aba
     public Tuple<int, int> pos;
 
@@ -46,17 +49,15 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
 
     public Cell SetValue(CellSO _typeOfSprite=null, bool _isVisible =false)
     {
-        cellSO = (_typeOfSprite == null ? GameManagerODS7.gm.cellSprites[Random.Range(0, GameManagerODS7.gm.cellSprites.Length)]: null);
+        cellSO = _typeOfSprite == null 
+            ? GameManagerODS7.gm.cellSprites[Random.Range(0, GameManagerODS7.gm.cellSprites.Length)]
+            : _typeOfSprite;
 
         if (_isVisible)
         {
             visible = true;
             locked = true;
-
-            if (cellSO == null)
-                cellSO = GameManagerODS7.gm.cellSprites[0];
-
-            image.sprite = cellSO.sprite;
+            anim.SetTrigger("Open");
         }
 
         return this;
@@ -67,16 +68,12 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         locked = true;
 
         cellSO = GameManagerODS7.gm.battery;
-        image.sprite = cellSO.sprite;
+        anim.SetTrigger("Open");
+        //image.sprite = cellSO.sprite;
 
         //neighborhood= GameManagerODS7.gm.CheckNeighborhood(pos.Item1, pos.Item2);
 
         return this;
-    }
-    public void SetNewSO(CellSO so)
-    {
-        cellSO = so;
-        image.sprite = cellSO.sprite;
     }
 
 
@@ -93,12 +90,10 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         isGivingPower = true;
         startEnergy = _start;
 
-        //temporal para testear
-        StartCoroutine(navegating());
+        anim.SetTrigger("Enter");
     }
-    IEnumerator navegating()
+    public void PassEnergy()//da energia
     {
-        yield return new WaitForSeconds(5);
         isGivingPower = false;
         Debug.Log("intento dar energia");
 
@@ -106,8 +101,6 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         if (neighborhood.Length <= 0 && !GameManagerODS7.gm.grid.CellsAnyGivingEnergy)
         {
             Debug.Log("Perdiste");
-            StopAllCoroutines();
-            yield break;
         }
             
         //da energia a vecinos y comprueba si llegaste al objetivo
@@ -122,9 +115,6 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
                 {
                     _item.FinishLevelCell();
                 }
-                
-                StopAllCoroutines();
-                yield break;
             }
 
             item.Item1.GetPowered(item.Item2);
@@ -157,17 +147,13 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         {
             OnPressed = !OnPressed;
             grid.CheckChange();
+            
         }
         else
         {
             visible = true;
-
+            anim.SetTrigger("Open");
             GameManagerODS7.gm.grid.RecalculateNeighborhood();
-
-            if (cellSO ==null)
-                cellSO = GameManagerODS7.gm.cellSprites[0];
-
-            image.sprite = cellSO.sprite;
         }
     }
 

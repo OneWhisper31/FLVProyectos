@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Eolica
   m_EditorClassIdentifier: 
   animator: {fileID: 9100000, guid: b9593233860dc0b44a1272b287a698cd, type: 2}
-  initialSprite: {fileID: 21300000, guid: 9bd78470cbdbf5342af5ada6008c3f34, type: 3}
-  isRenovable: 0
+  initialSprite: {fileID: 21300000, guid: 9645ae2f830ca4e40a1dfc152f44ec8d, type: 3}
+  isRenovable: 1

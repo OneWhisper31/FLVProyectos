@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2cb87da9f40a6b048b62eac78ddab11e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6337c92293bbec940ad4fb7ace61f2ac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -94,8 +94,7 @@ MonoBehaviour:
   visible: 0
   isGivingPower: 0
   anim: {fileID: 6470979514731770788}
-  sprite: {fileID: 9170815406893313715}
-  _cells: {fileID: 0}
+  hideTubeSprite: {fileID: 21300000, guid: 6337c92293bbec940ad4fb7ace61f2ac, type: 3}
   startEnergy: 0
 --- !u!95 &6470979514731770788
 Animator:

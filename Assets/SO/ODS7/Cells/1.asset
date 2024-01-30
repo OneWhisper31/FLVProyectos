@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa733e8791fad8841986f694fabe3a17, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: Assembly-CSharp::CellSO
-  sprite: {fileID: -1665267560, guid: 0536c584bc2692947986089266fedb82, type: 3}
+  animator: {fileID: 9100000, guid: 133fa5f7b2ad3f941bddcaa07c7ff69d, type: 2}
+  sprite: {fileID: 21300000, guid: a036ec883ec27a940a13f8204962607a, type: 3}
   enterEnergy: 00010001

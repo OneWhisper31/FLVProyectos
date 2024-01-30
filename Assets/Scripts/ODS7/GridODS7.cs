@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Linq;
 using System;
 using Random = UnityEngine.Random;
-using UnityEngine.UI;
 
 public class GridODS7 : MonoBehaviour
 {
@@ -19,6 +18,8 @@ public class GridODS7 : MonoBehaviour
     public bool CellsAnyGivingEnergy { get => cells.Any(x => x.isGivingPower); }
 
     [SerializeField] int maxBatteries;
+
+    //public Sprite hideTubeSprite;
 
 
     //posicion = i + j * width;
@@ -44,7 +45,7 @@ public class GridODS7 : MonoBehaviour
             int pos = i + j * width;
 
             Cell _cell 
-            = Instantiate(cell, pivot.position + new Vector3(i *Screen.width*0.065f, j * Screen.height * 0.11f, 0), Quaternion.identity, pivot)
+            = Instantiate(cell, pivot.position + new Vector3(i *Screen.width*0.065f, j * Screen.height * 0.115f, 0), Quaternion.identity, pivot)
                 .GetComponent<Cell>().SetValue();
             _cell.name += pos;//diferenciacion
             _cell.pos = Tuple.Create(i, j);//le da su posicion
@@ -91,15 +92,12 @@ public class GridODS7 : MonoBehaviour
 
         }).ToArray();
 
-
         //una vez que esta establecido el array, chequea vecinos
         foreach (var _cell in cells)
             _cell.neighborhood = CheckNeighborhood(_cell.pos.Item1,_cell.pos.Item2);
     }
     public void StartGame()
     {//llamado cuando elije la energia, que da inicio al juego dando energia
-        //foreach (var cell in cells)
-        //    cell.GetComponent<Image>().raycastTarget = true;
 
         cells[11].GetPowered(0);//arranca la energia por la izq
     }
@@ -121,8 +119,8 @@ public class GridODS7 : MonoBehaviour
             var firstSO = first.cellSO;
             var lastSO = last.cellSO;
 
-            first.SetNewSO(lastSO);
-            last.SetNewSO(firstSO);
+            first.cellSO = lastSO;
+            last.cellSO  = firstSO;
 
             foreach (var item in cellsPressed)
                 item.OnPressed = false;

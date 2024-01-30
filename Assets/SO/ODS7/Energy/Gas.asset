@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Gas
   m_EditorClassIdentifier: 
   animator: {fileID: 9100000, guid: 4d7caf3f826a08042bcf79be014ca48b, type: 2}
-  initialSprite: {fileID: 21300000, guid: 184d01e599f01d648ac2ab59fbf1740b, type: 3}
+  initialSprite: {fileID: 21300000, guid: 9c93c0617c2bf834d97436bb92fabe92, type: 3}
   isRenovable: 0

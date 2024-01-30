@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ODS13_BuildingDebug.unity
     guid: 7ec06a1dabbff6f449bb8e6757c83053
+  - enabled: 1
+    path: Assets/Scenes/ODS7.unity
+    guid: 75ef4a3acf34a414c84130dca148796d
   m_configObjects: {}

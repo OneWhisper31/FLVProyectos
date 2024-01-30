@@ -16,6 +16,12 @@ public class EnergyChoose : MonoBehaviour
 
     public Transform EnergyGameplay;
 
+    private void Start()
+    {
+        selectorImage.sprite = energies[index].initialSprite;
+        energy.EnergySO = energies[index];
+    }
+
     public void StartGame()
     {
         for (int i = 0; i < transform.childCount; i++)

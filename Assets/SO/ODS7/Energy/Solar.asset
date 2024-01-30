@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Solar
   m_EditorClassIdentifier: 
   animator: {fileID: 9100000, guid: 51255c5a4959d5c4296729eee5fa5e92, type: 2}
-  initialSprite: {fileID: 21300000, guid: 8231c18d4756f9747ab0a6c7db5a456e, type: 3}
-  isRenovable: 0
+  initialSprite: {fileID: 21300000, guid: 8c39106484149694ab52f54df040deab, type: 3}
+  isRenovable: 1
