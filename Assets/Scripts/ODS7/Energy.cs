@@ -14,4 +14,15 @@ public class Energy : MonoBehaviour
             sprite.sprite = energySO.initialSprite;
         }}
     EnergySO energySO;
+
+    public Animator windAnim;//solo eolica
+
+    public void StopAnim()
+    {
+        anim.enabled = false;
+        sprite.sprite = energySO.initialSprite;
+
+        if (energySO.typeOfEnergy == TypeOfEnergy.Eolica)
+            windAnim.SetTrigger("Off");
+    }
 }

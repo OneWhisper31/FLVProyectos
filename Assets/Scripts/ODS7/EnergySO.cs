@@ -8,6 +8,15 @@ public class EnergySO : ScriptableObject
     public RuntimeAnimatorController animator;
     public Sprite initialSprite;
     public bool isRenovable;
+    public TypeOfEnergy typeOfEnergy;
     
 }
-//animator.runtimeAnimatorController = newController;
+
+
+public enum TypeOfEnergy
+{
+    Solar,
+    Petroleo,
+    Eolica,
+    Gas
+}

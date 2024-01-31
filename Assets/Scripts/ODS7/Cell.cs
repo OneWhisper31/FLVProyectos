@@ -12,7 +12,9 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
     public bool locked, hasEnergy, visible, isGivingPower;
     public bool OnPressed { get => pressed; set { pressed = value; image.color = pressed ? cellColors.pressedColor : cellColors.normalColor; } }
     GridODS7 grid { get => GameManagerODS7.gm.grid; }
+    CanvasHandlerODS7 canvasHandler { get => GameManagerODS7.gm.canvasHandler; }
     CellColors cellColors { get => GameManagerODS7.gm.grid.cellColors; }
+    
 
     public Animator anim;
     //public Image sprite;
@@ -91,6 +93,9 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         startEnergy = _start;
 
         anim.SetTrigger("Enter");
+
+        if (cellSO == GameManagerODS7.gm.battery)
+            grid.batteriesPowered++;
     }
     public void PassEnergy()//da energia
     {
@@ -98,9 +103,11 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         Debug.Log("intento dar energia");
 
         //si tiene que dar energia y no tiene vecinos que pregunte si hay otro que este dando energia(si no periste)
-        if (neighborhood.Length <= 0 && !GameManagerODS7.gm.grid.CellsAnyGivingEnergy)
+        if (neighborhood.Length <= 0 && !grid.CellsAnyGivingEnergy)
         {
             Debug.Log("Perdiste");
+            grid.StopEnergy();
+            canvasHandler.EndLoseUI();
         }
             
         //da energia a vecinos y comprueba si llegaste al objetivo
@@ -108,13 +115,20 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         {
             Debug.Log("di energia a " + item.Item1.name);
 
-            if (item.Item1 == GameManagerODS7.gm.grid.LastCell)
+            if (item.Item1 == grid.LastCell)
             {
                 Debug.Log("Ganaste");
-                foreach (var _item in GameManagerODS7.gm.grid.cells)
+                grid.StopEnergy();
+
+                if (grid.IsEnergyRenovable)
                 {
-                    _item.FinishLevelCell();
+                    if(grid.HasPoweredAllBateries)
+                        canvasHandler.EndPositive(grid.TypeOfEnergy);
+                    else
+                        canvasHandler.EndNeutral(grid.TypeOfEnergy);
                 }
+                else
+                    canvasHandler.EndNegative(grid.TypeOfEnergy);
             }
 
             item.Item1.GetPowered(item.Item2);
@@ -153,7 +167,7 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         {
             visible = true;
             anim.SetTrigger("Open");
-            GameManagerODS7.gm.grid.RecalculateNeighborhood();
+            grid.RecalculateNeighborhood();
         }
     }
 

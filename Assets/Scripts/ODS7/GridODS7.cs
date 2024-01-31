@@ -18,6 +18,11 @@ public class GridODS7 : MonoBehaviour
     public bool CellsAnyGivingEnergy { get => cells.Any(x => x.isGivingPower); }
 
     [SerializeField] int maxBatteries;
+    public int batteriesPowered;
+
+    public bool HasPoweredAllBateries { get => batteriesPowered >= maxBatteries; }
+    public bool IsEnergyRenovable { get => GameManagerODS7.gm.energyChoose.energy.EnergySO.isRenovable; }
+    public TypeOfEnergy TypeOfEnergy { get => GameManagerODS7.gm.energyChoose.energy.EnergySO.typeOfEnergy; }
 
     //public Sprite hideTubeSprite;
 
@@ -100,6 +105,15 @@ public class GridODS7 : MonoBehaviour
     {//llamado cuando elije la energia, que da inicio al juego dando energia
 
         cells[11].GetPowered(0);//arranca la energia por la izq
+    }
+    public void StopEnergy()//funcion usada para que se deje de dar energia en todas las celdas pq o se gano o se perdio
+    {
+        foreach (Cell _cell in cells)
+        {
+            _cell.isGivingPower = false;
+            _cell.FinishLevelCell();
+            _cell.anim.speed=0;
+        }
     }
     public void CheckChange()
     {
