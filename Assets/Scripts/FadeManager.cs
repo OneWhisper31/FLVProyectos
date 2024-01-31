@@ -17,7 +17,7 @@ public class FadeManager : MonoBehaviour
     {
         if (initialFadeIn)
             FadeIn();
-        if (initialPause)
+        if (initialPause&& GameManager.Instance!=null)
             GameManager.Instance.pauseMode = true;
     }
 
