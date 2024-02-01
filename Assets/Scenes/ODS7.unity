@@ -866,17 +866,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318757645}
-  m_LocalRotation: {x: 0, y: 0, z: -0.23344536, w: 0.97236997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.1355337, y: 1.1355337, z: 1.1355337}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1330666197}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -27}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 823, y: -260}
-  m_SizeDelta: {x: 199.036, y: 167.391}
+  m_AnchoredPosition: {x: -1700, y: 500}
+  m_SizeDelta: {x: 1013, y: 373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &318757647
 MonoBehaviour:
@@ -2885,7 +2885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grid: {fileID: 1484298650}
   canvasHandler: {fileID: 1954773389}
-  energyChoose: {fileID: 0}
+  energyChoose: {fileID: 607776258}
   cellSprites:
   - {fileID: 11400000, guid: 55921ebc26f093b408d789a656836cf6, type: 2}
   - {fileID: 11400000, guid: bddae7ed695e1064daaef870110d84d1, type: 2}
@@ -3269,17 +3269,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428125909}
-  m_LocalRotation: {x: 0, y: 0, z: -0.23344536, w: 0.97236997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.1355337, y: 1.1355337, z: 1.1355337}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1330666197}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -27}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 823, y: -260}
-  m_SizeDelta: {x: 199.036, y: 167.391}
+  m_AnchoredPosition: {x: 1700, y: 500}
+  m_SizeDelta: {x: 1013, y: 373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1428125911
 MonoBehaviour:

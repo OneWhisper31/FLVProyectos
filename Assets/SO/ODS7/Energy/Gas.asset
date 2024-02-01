@@ -15,3 +15,4 @@ MonoBehaviour:
   animator: {fileID: 9100000, guid: 4d7caf3f826a08042bcf79be014ca48b, type: 2}
   initialSprite: {fileID: 21300000, guid: 9c93c0617c2bf834d97436bb92fabe92, type: 3}
   isRenovable: 0
+  typeOfEnergy: 3
