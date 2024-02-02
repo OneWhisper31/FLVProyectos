@@ -868,11 +868,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
-      propertyPath: dialoges.Array.size
+      propertyPath: introSO.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: dialoges.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: IntroSO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7053e88097ae0d84f93e412d5dd7cd5d, type: 2}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: introSO.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 7053e88097ae0d84f93e412d5dd7cd5d, type: 2}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
@@ -2519,51 +2527,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b87826b1ba31546a45a3b9aba90ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questions:
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
-    question: "\xBFComo podemos ayudar a reducir la huella de carbono?"
-    answers:
-    - text: "Utilizar bolsas de pl\xE1stico desechables."
-      isTrue: 0
-    - text: "Tomar duchas largas todos los d\xEDas."
-      isTrue: 0
-    - text: "Usar transporte p\xFAblico en lugar de conducir un autom\xF3vil."
-      isTrue: 1
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
-    question: "\xBFCu\xE1l de los siguientes h\xE1bitos contribuye a la conservaci\xF3n
-      de energ\xEDa en el hogar?"
-    answers:
-    - text: "Apagar los electrodom\xE9sticos cuando no est\xE1n en uso."
-      isTrue: 1
-    - text: "Usar calentadores el\xE9ctricos en lugar de sistemas de calefacci\xF3n
-        central."
-      isTrue: 0
-    - text: Dejar correr el agua mientras te cepillas los dientes.
-      isTrue: 0
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
-    question: "\xBFC\xF3mo pod\xE9s contribuir a la protecci\xF3n de la biodiversidad
-      y la conservaci\xF3n de los ecosistemas?"
-    answers:
-    - text: Usar las hojas solo una vez.
-      isTrue: 0
-    - text: "Usar pesticidas fuertes en tu jard\xEDn."
-      isTrue: 0
-    - text: Reducir, reutilizar y reciclar.
-      isTrue: 1
-  - izqCharacter: {fileID: 21300000, guid: 75ec5db5fd2a5774881871e90c4d128e, type: 3}
-    derCharacter: {fileID: 21300000, guid: e4e5bed1aa407874f98b6c67abbc78bc, type: 3}
-    question: " \xBFQu\xE9 acci\xF3n pod\xE9s tomar para reducir la cantidad de residuos
-      pl\xE1sticos en el ambiente?"
-    answers:
-    - text: "Comprar productos envasados en pl\xE1stico de un solo uso"
-      isTrue: 0
-    - text: "Usar botellas de agua de pl\xE1stico desechables"
-      isTrue: 0
-    - text: "Reciclar botellas de pl\xE1stico adecuadamente"
-      isTrue: 1
+  typeODS: 1
+  triviaSO:
+  - {fileID: 11400000, guid: 19451c28e5571694e9bbc239febad7b7, type: 2}
+  - {fileID: 11400000, guid: 95c9c4f456936e14dbc68908c814d926, type: 2}
+  - {fileID: 11400000, guid: eb043d35219e119498e5b33eb50c153e, type: 2}
+  questions: []
   izqCharacter: {fileID: 8196724482388342425}
   derCharacter: {fileID: 6878019856514035628}
   questionText: {fileID: 8964414942527093129}

@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060e932ccf09831498bc153a913bb371, type: 3}
   m_Name: ODS7
   m_EditorClassIdentifier: 
-  questions: []
+  questions:
+  - question: increible
+    answers:
+    - text: si
+      isTrue: 1
+    - text: no
+      isTrue: 0
+    - text: no
+      isTrue: 0
+    - text: no
+      isTrue: 0

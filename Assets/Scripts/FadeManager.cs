@@ -26,7 +26,10 @@ public class FadeManager : MonoBehaviour
 
     IEnumerator _FadeOut()//enrealidad es fadein
     {
-        var color = fadeout.color;
+        //if (nextScene == Scenes.Introduction)
+        //    yield break;
+
+            var color = fadeout.color;
         color.a = 0;
         fadeout.color = color;
 
@@ -39,7 +42,7 @@ public class FadeManager : MonoBehaviour
         color.a = 1;
         fadeout.color = color;
 
-        GameManager.Instance.pauseMode = false;
+        //GameManager.Instance.pauseMode = false;
         SceneManager.LoadScene(nextScene.ToString());
     }
     IEnumerator _FadeIn()//enrealidad es fadeout

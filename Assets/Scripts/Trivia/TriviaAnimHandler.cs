@@ -19,7 +19,7 @@ public class TriviaAnimHandler : MonoBehaviour
         triviaObj.localScale = Vector3.zero;
         triviaObj.gameObject.SetActive(true);
 
-
+        trivia.Initialize();
 
         button.DOScale(0, 0.5f)
             .OnComplete(() => {

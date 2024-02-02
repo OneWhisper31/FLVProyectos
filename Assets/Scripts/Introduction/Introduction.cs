@@ -12,7 +12,7 @@ public class Introduction : MonoBehaviour
     public ODSType typeODS;
     public IntroductionSO[] introSO;
 
-    [SerializeField] List<Dialoge> Dialoges { get => introSO[(int)typeODS].dialoges; }
+    [SerializeField] List<Dialoge> dialoges;
 
     [SerializeField] Image izqCharacter;
     [SerializeField] Image derCharacter;
@@ -30,9 +30,14 @@ public class Introduction : MonoBehaviour
     [SerializeField] UnityEvent onEnd;
     public Scenes nextScene;
 
-    private void Start()
+    private void Awake()
     {
         button.Interacteable = false;
+        Initialize();
+    }
+    private void Initialize()
+    {
+        dialoges = new List<Dialoge>(introSO[(int)typeODS].dialoges);
     }
 
     public void LoadScene(){
@@ -66,15 +71,18 @@ public class Introduction : MonoBehaviour
     // Start is called before the first frame update
     public void OnNext()
     {
+        if (dialoges == default)
+            Initialize();
+
         button.Interacteable = false;
-        if (Dialoges.Count <= 0)
+        if (dialoges.Count <= 0)
         {
             onEnd?.Invoke();
             return;
         }
 
-        Dialoge dialoge = Dialoges[0];
-        Dialoges.RemoveAt(0);
+        Dialoge dialoge = dialoges[0];
+        dialoges.RemoveAt(0);
 
 
         //si se necesita se activa

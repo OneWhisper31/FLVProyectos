@@ -10,7 +10,7 @@ public class Trivia : MonoBehaviour
     public ODSType typeODS;
     public TriviaSO[] triviaSO;
 
-    [SerializeField] List<Questions> Questions { get => triviaSO[(int)typeODS].questions; }
+    [SerializeField] List<Questions> questions;
 
     Questions currentQuestion;
 
@@ -30,23 +30,24 @@ public class Trivia : MonoBehaviour
     [SerializeField] TriviaAnimHandler triviaAnim;
 
     [SerializeField] UnityEvent onEnd;
-    public bool Finished { get => Questions.Count <= 0; }
+    public bool Finished { get => questions.Count <= 0; }
     public Scenes nextScene;
-
-    public void Start()
+    public void Initialize()
     {
+        questions = new List<Questions>(triviaSO[(int)typeODS].questions);
         SetNewQuestion();
     }
+
     public void SetNewQuestion()
     {
-        if (Questions.Count <= 0)
+        if (questions.Count <= 0)
         {
             onEnd?.Invoke();
             return;
         }
 
-        currentQuestion = Questions[0];
-        Questions.RemoveAt(0);
+        currentQuestion = questions[0];
+        questions.RemoveAt(0);
 
         //si los necesito se usan
         //izqCharacter.sprite = currentQuestion.izqCharacter;
