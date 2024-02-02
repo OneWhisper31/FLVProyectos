@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class AnimODS : MonoBehaviour
 {
-    [SerializeField] VideoClip video;
+    //[SerializeField] VideoClip video;
 
     [SerializeField] Transform fadeManager;
     [SerializeField] Transform intro;
+
+    [SerializeField] Introduction introduction;
 
     VideoPlayer videoPlayer;
     RawImage image;
@@ -19,7 +21,7 @@ public class AnimODS : MonoBehaviour
     {
         videoPlayer = GetComponentInChildren<VideoPlayer>();
         image = videoPlayer.GetComponent<RawImage>();
-        videoPlayer.clip = video;
+        videoPlayer.clip = introduction.introSO[(int)introduction.typeODS].introAnim;
 
         videoPlayer.loopPointReached += (x) =>
         {

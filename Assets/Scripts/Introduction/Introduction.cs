@@ -9,7 +9,10 @@ using DG.Tweening;
 
 public class Introduction : MonoBehaviour
 {
-    [SerializeField] List<Dialoge> dialoges;
+    public ODSType typeODS;
+    public IntroductionSO[] introSO;
+
+    [SerializeField] List<Dialoge> Dialoges { get => introSO[(int)typeODS].dialoges; }
 
     [SerializeField] Image izqCharacter;
     [SerializeField] Image derCharacter;
@@ -46,7 +49,10 @@ public class Introduction : MonoBehaviour
             fadeout.color = color;
             yield return new WaitForEndOfFrame();
         }
-        SceneManager.LoadScene(nextScene.ToString());
+        if(nextScene==Scenes.Game)
+            SceneManager.LoadScene(introSO[(int)typeODS].type.ToString());
+        else
+            SceneManager.LoadScene(nextScene.ToString());
     }
 
     public void InitDialoge(){
@@ -61,17 +67,19 @@ public class Introduction : MonoBehaviour
     public void OnNext()
     {
         button.Interacteable = false;
-        if (dialoges.Count <= 0)
+        if (Dialoges.Count <= 0)
         {
             onEnd?.Invoke();
             return;
         }
 
-        Dialoge dialoge = dialoges[0];
-        dialoges.RemoveAt(0);
+        Dialoge dialoge = Dialoges[0];
+        Dialoges.RemoveAt(0);
 
-        izqCharacter.sprite = dialoge.izqCharacter;
-        derCharacter.sprite = dialoge.derCharacter;
+
+        //si se necesita se activa
+        //izqCharacter.sprite = dialoge.izqCharacter;
+        //derCharacter.sprite = dialoge.derCharacter;
 
         switch (dialoge.popUpDir)
         {
@@ -99,8 +107,9 @@ public class Introduction : MonoBehaviour
 [System.Serializable]
 public struct Dialoge
 {
-    public Sprite izqCharacter;
-    public Sprite derCharacter;
+    //si se necesita se activa
+    //public Sprite izqCharacter;
+    //public Sprite derCharacter;
     public PopUpDir popUpDir;
     public string text;
 }
@@ -111,7 +120,7 @@ public enum PopUpDir
 }
 public enum Scenes
 {
-    ODS13,
+    Game,
     Introduction,
     Trivia
     //agregar mas escenas

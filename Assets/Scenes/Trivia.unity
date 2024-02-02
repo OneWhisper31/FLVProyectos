@@ -864,9 +864,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: IntroSO.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: dialoges.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: IntroSO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7053e88097ae0d84f93e412d5dd7cd5d, type: 2}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: dialoges.Array.data[0].text
       value: "\xBFComo podriamos seguir ayudando?"
@@ -1443,6 +1451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeout: {fileID: 1108376676}
   initialFadeIn: 1
+  initialPause: 0
   nextScene: 1
 --- !u!114 &1433275800
 MonoBehaviour:

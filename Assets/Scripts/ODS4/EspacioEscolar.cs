@@ -6,6 +6,8 @@ using System.Linq;
 
 public class EspacioEscolar : MonoBehaviour
 {
+    public string structureName;//usado para destacar cuando no se gastaron puntos en las misma
+
     public ODS4Buildings[] levelsImage;//tienen que ocuparse en orden
 
     //nivel 1 significa que no aumento nada y nivel 4 siginifica que la categoria esta al max

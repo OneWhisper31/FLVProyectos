@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
 public class Trivia : MonoBehaviour
 {
-    [SerializeField] List<Questions> questions;
+    public ODSType typeODS;
+    public TriviaSO[] triviaSO;
+
+    [SerializeField] List<Questions> Questions { get => triviaSO[(int)typeODS].questions; }
+
     Questions currentQuestion;
 
     [SerializeField] Image izqCharacter;
@@ -27,7 +30,7 @@ public class Trivia : MonoBehaviour
     [SerializeField] TriviaAnimHandler triviaAnim;
 
     [SerializeField] UnityEvent onEnd;
-    public bool Finished { get => questions.Count <= 0; }
+    public bool Finished { get => Questions.Count <= 0; }
     public Scenes nextScene;
 
     public void Start()
@@ -36,17 +39,18 @@ public class Trivia : MonoBehaviour
     }
     public void SetNewQuestion()
     {
-        if (questions.Count <= 0)
+        if (Questions.Count <= 0)
         {
             onEnd?.Invoke();
             return;
         }
 
-        currentQuestion = questions[0];
-        questions.RemoveAt(0);
+        currentQuestion = Questions[0];
+        Questions.RemoveAt(0);
 
-        izqCharacter.sprite = currentQuestion.izqCharacter;
-        derCharacter.sprite = currentQuestion.derCharacter;
+        //si los necesito se usan
+        //izqCharacter.sprite = currentQuestion.izqCharacter;
+        //derCharacter.sprite = currentQuestion.derCharacter;
 
         questionText.text = currentQuestion.question;
 
@@ -77,8 +81,9 @@ public class Trivia : MonoBehaviour
 [System.Serializable]
 public struct Questions
 {
-    public Sprite izqCharacter;
-    public Sprite derCharacter;
+    //si los necesito se usan
+    //public Sprite izqCharacter;
+    //public Sprite derCharacter;
     public string question;
     public List<Answer> answers;
 }

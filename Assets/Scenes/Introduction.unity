@@ -876,6 +876,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: bb50c5cc15fc863479b59d75492154ab, type: 3}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: typeODS
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: IntroSO.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: IntroSO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a8978445e72a4be4999ae60d8285edfb, type: 2}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: IntroSO.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 68ea7fc4cec1527449cf941856019b9e, type: 2}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: IntroSO.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: df9f0e06079c1ac4ea4ad73014a53b12, type: 2}
     m_RemovedComponents:
     - {fileID: 8316271021741304761, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
     m_RemovedGameObjects: []
@@ -1003,9 +1023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4a61d758a8ec4438fa884f520893d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  video: {fileID: 32900000, guid: 4c050549d609a0940957d54ace992cfe, type: 3}
   fadeManager: {fileID: 1424079044}
   intro: {fileID: 887515104}
+  introduction: {fileID: 1459284367}
 --- !u!1 &1416926041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,6 +1132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeout: {fileID: 665298192}
   initialFadeIn: 1
+  initialPause: 0
   nextScene: 2
 --- !u!114 &1424079041
 MonoBehaviour:
@@ -1196,6 +1217,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1459284367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+  m_PrefabInstance: {fileID: 999203338}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a116c55dabd39a948b7becb00ad88780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1776093129
 GameObject:
   m_ObjectHideFlags: 0
