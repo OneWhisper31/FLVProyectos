@@ -5,11 +5,12 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class InfoButton : InteractuableObject
 {
     [SerializeField]
-    [TextAreaAttribute(0, 10)]
+    [TextArea(0, 10)]
     string description;
 
     Transform descriptionTextArea;
@@ -26,6 +27,8 @@ public class InfoButton : InteractuableObject
 
     [SerializeField]Image levelSlider;
     [SerializeField] PointsSystem pointsSystem;
+
+    public UnityEvent OnClick;
 
     private void Start()
     {
@@ -59,6 +62,7 @@ public class InfoButton : InteractuableObject
         {
             pointsSystem.points -= 710;
             level++;
+            OnClick?.Invoke();
         }
     }
 
