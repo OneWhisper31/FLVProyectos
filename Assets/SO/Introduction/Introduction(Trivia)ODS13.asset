@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bf7cba8e0dc66441b070d1d7774fda3, type: 3}
-  m_Name: Introduction(Trivia)
+  m_Name: Introduction(Trivia)ODS13
   m_EditorClassIdentifier: 
-  type: 0
+  type: 2
   dialoges:
   - popUpDir: 0
-    text: "\xBFComo podriamos seguir ayudando?"
+    text: "\xBFC\xF3mo podemos seguir ayudando a adaptarnos y mitigar los efectos
+      del cambio clim\xE1tico?"
   introAnim: {fileID: 0}

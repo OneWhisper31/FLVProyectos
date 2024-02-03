@@ -15,7 +15,24 @@ MonoBehaviour:
   type: 0
   dialoges:
   - popUpDir: 0
-    text: Prueba
+    text: "\xA1Hola, Amira! \xBFConoc\xE9s el Objetivo de Desarrollo Sostenible 4?"
   - popUpDir: 1
-    text: Hola
+    text: "\xA1S\xED, lo conozco! Ese es el que propone metas para que todos los
+      chicos y chicas del mundo puedan acceder a una educaci\xF3n de calidad, \xBFNo
+      es cierto?"
+  - popUpDir: 0
+    text: "Exacto, Amira. El ODS 4 busca asegurar una educaci\xF3n inclusiva, equitativa
+      y de calidad. \xBFQueres aprender m\xE1s sobre este ODS tan importante?"
+  - popUpDir: 1
+    text: "\xA1Dale! La educaci\xF3n es clave para construir un presente y un futuro
+      mejores."
+  - popUpDir: 0
+    text: "Entonces, \xBFc\xF3mo conseguimos una educaci\xF3n de calidad para todos
+      y todas?"
+  - popUpDir: 1
+    text: "Debemos garantizar que todos tengan acceso a una buena educaci\xF3n, mam\xE1s
+      all\xE1 de su situaci\xF3n particular."
+  - popUpDir: 0
+    text: "\xA1Correcto! Implica no dejar a nadie atr\xE1s y brindar oportunidades
+      educativas para todos, sin importar su origen o circunstancias personales."
   introAnim: {fileID: 32900000, guid: 4c7279ae00520c04bbca53fcce715603, type: 3}

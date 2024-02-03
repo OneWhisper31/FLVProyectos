@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Introduction.unity
     guid: e835d586ffa18a348b0bbadbda6bc36a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ODS13.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/ODS7.unity
     guid: 75ef4a3acf34a414c84130dca148796d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ODS4.unity
     guid: 13d2a61e91f4ac042b89c8a00a67755b
   - enabled: 1

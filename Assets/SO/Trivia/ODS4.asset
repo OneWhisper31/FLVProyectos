@@ -13,23 +13,44 @@ MonoBehaviour:
   m_Name: ODS4
   m_EditorClassIdentifier: 
   questions:
-  - question: prueba
+  - question: "\xBFCu\xE1l de las siguientes opciones contribuye a la igualdad de
+      oportunidades en la educaci\xF3n?"
     answers:
-    - text: si
+    - text: "Ofrecer becas y ayudas econ\xF3micas para estudiantes de bajos ingresos."
       isTrue: 1
-    - text: no
+    - text: "Limitar el acceso a la educaci\xF3n superior."
       isTrue: 0
-    - text: no
+    - text: "Mantener la educaci\xF3n solo para aquellos que pueden pagarla."
       isTrue: 0
-    - text: no
-      isTrue: 0
-  - question: prueba
+  - question: "\xBFQu\xE9 acciones colaboran con el logro de una educaci\xF3n de
+      calidad?"
     answers:
-    - text: si
+    - text: "Promover capacitaci\xF3n docente s\xF3lo para quienes lo solicitan"
+      isTrue: 0
+    - text: "Entregar recursos educativos (libros, computadoras) a las escuelas m\xE1s
+        antiguas de la Ciudad."
+      isTrue: 0
+    - text: "Construir m\xE1s escuelas en zonas de alta densidad poblacional."
       isTrue: 1
-    - text: no
+  - question: "\xBFC\xF3mo podemos comprometernos para alcanzar una educaci\xF3n
+      de calidad?"
+    answers:
+    - text: "Promover educaci\xF3n desde los 6 a\xF1os. Los nenes y nenas de menos
+        edad son muy peque\xF1os."
       isTrue: 0
-    - text: no
+    - text: "Colaborar en proyectos de educaci\xF3n inclusiva y acceso para todos."
+      isTrue: 1
+    - text: Cuidando y usando con responsabilidad los recursos educativos disponibles
+        en la escuela.
+      isTrue: 1
+  - question: "\xBFC\xF3mo crees que la educaci\xF3n de calidad puede contribuir
+      al desarrollo sostenible?"
+    answers:
+    - text: "La educaci\xF3n no se vincula con los problemas del planeta. No tiene
+        impacto en el desarrollo sostenible."
       isTrue: 0
-    - text: no
+    - text: "La educaci\xF3n proporciona a las personas las habilidades y conocimientos
+        necesarios para abordar los desaf\xEDos actuales y futuros."
+      isTrue: 1
+    - text: "La educaci\xF3n nos hace mejores personas."
       isTrue: 0

@@ -13,7 +13,7 @@ public class InfoButton : InteractuableObject
     [TextArea(0, 10)]
     string description;
 
-    Transform descriptionTextArea;
+    [HideInInspector]public Transform descriptionTextArea;
     TextMeshProUGUI textObj;
 
     int _level = 1;//max level2(level3)
@@ -32,7 +32,7 @@ public class InfoButton : InteractuableObject
 
     private void Start()
     {
-        descriptionTextArea = GetComponentInChildren<UnityEngine.UI.RawImage>().transform;
+        descriptionTextArea = GetComponentInChildren<RawImage>().transform;
         textObj = GetComponentInChildren<TextMeshProUGUI>();
 
         textObj.text = description;
@@ -79,6 +79,11 @@ public class InfoButton : InteractuableObject
             pointsSystem.EndGame();
         }
     }
+    public void Deactivated()
+    {
 
+        descriptionTextArea.DOScale(0, 0.5f);
+        Interacteable = false;
+    }
 
 }

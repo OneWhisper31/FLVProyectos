@@ -13,13 +13,45 @@ MonoBehaviour:
   m_Name: ODS7
   m_EditorClassIdentifier: 
   questions:
-  - question: increible
+  - question: "\xBFQu\xE9 significa tener acceso a una energ\xEDa asequible y no
+      contaminante?"
     answers:
-    - text: si
+    - text: "Utilizar combustibles f\xF3siles y derivados del petr\xF3leo siempre
+        que sea posible y sin restricciones."
+      isTrue: 0
+    - text: "Garantizar que todos tengan acceso a fuentes de energ\xEDa que no da\xF1en
+        el ambiente."
       isTrue: 1
-    - text: no
+    - text: "Cobrar impuestos a aquellas personas que usen energ\xEDa solar o e\xF3lica."
       isTrue: 0
-    - text: no
+  - question: "\xBFCu\xE1l es una forma de promover la energ\xEDa sostenible en espacios
+      compartidos?"
+    answers:
+    - text: "Dejar los electrodom\xE9sticos enchufados para tener un acceso r\xE1pido
+        a su uso."
       isTrue: 0
-    - text: no
+    - text: "Dejar las ventanas abiertas cuando est\xE1 prendida la calefacci\xF3n
+        para asegurar que recircule el aire."
+      isTrue: 0
+    - text: "Instalar bombitas LED, paneles solares y utilizar electrodom\xE9sticos
+        de bajo consumo."
+      isTrue: 1
+  - question: "\xBFQu\xE9 podemos hacer en nuestro hogar para disminuir el consumo
+      de energ\xEDa?"
+    answers:
+    - text: "Enfriar la comida caliente en la heladera para que baje la temperatura
+        m\xE1s r\xE1pido."
+      isTrue: 0
+    - text: Correr las cortinas para dejar entrar la luz solar.
+      isTrue: 1
+    - text: "Usar el aire acondicionado en 18\xB0C."
+      isTrue: 0
+  - question: "\xBFQu\xE9 otras acciones colaboran con la disminuci\xF3n en el uso
+      de la energ\xEDa?"
+    answers:
+    - text: Cocinar con la olla tapada.
+      isTrue: 1
+    - text: Tomar duchas cortas.
+      isTrue: 1
+    - text: Dejar cargando el celular durante la noche.
       isTrue: 0

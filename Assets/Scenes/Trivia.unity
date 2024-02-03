@@ -746,6 +746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DebugMode
       objectReference: {fileID: 0}
+    - target: {fileID: 7449933882494563815, guid: 5f4dddfb65e77744fb133c28ced5c110, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -864,12 +868,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: typeODS
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: IntroSO.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: introSO.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: dialoges.Array.size
@@ -881,6 +889,14 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7053e88097ae0d84f93e412d5dd7cd5d, type: 2}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
       propertyPath: introSO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bf97d521bec3bf40ac2a7e1baeac7ad, type: 2}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: introSO.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: dcd85c6fb4a523c4cafe1f0bb1c342ce, type: 2}
+    - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}
+      propertyPath: introSO.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 7053e88097ae0d84f93e412d5dd7cd5d, type: 2}
     - target: {fileID: 7572537186550766123, guid: 47ed91515decd134a93b59ff6f2b6d2a, type: 3}

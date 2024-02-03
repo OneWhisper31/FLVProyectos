@@ -2461,7 +2461,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 41.6, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 98.372, y: 60.364}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955222391
 MonoBehaviour:
@@ -4220,7 +4220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yearsInitial: 2024
   yearsFinal: 2050
-  gametimeSeconds: 300
+  gametimeSeconds: 200
   years: {fileID: 1964581403}
   yearsSlider: {fileID: 1995172311}
   gei: {fileID: 2078352838}
@@ -11322,6 +11322,10 @@ PrefabInstance:
     - target: {fileID: 7449933882494563815, guid: 5f4dddfb65e77744fb133c28ced5c110, type: 3}
       propertyPath: m_Name
       value: DebugMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449933882494563815, guid: 5f4dddfb65e77744fb133c28ced5c110, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

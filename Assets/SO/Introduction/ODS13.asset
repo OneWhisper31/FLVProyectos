@@ -15,5 +15,23 @@ MonoBehaviour:
   type: 2
   dialoges:
   - popUpDir: 0
-    text: epic
+    text: "\xA1Hola, Amira! \xBFEscuchaste hablar de los Objetivos de Desarrollo
+      Sostenible(ODS)?"
+  - popUpDir: 1
+    text: "\xA1S\xED, claro! Son objetivos que acordaron muchos pa\xEDses del mundo
+      y nos ayudan a cuidar el planeta y construir una mejor convivencia entre los
+      ciudadanos y ciudadanas del mundo, \xBFverdad? "
+  - popUpDir: 0
+    text: "Exacto y hoy vamos a jugar para aprender sobre uno de ellos, el ODS 13:
+      Acci\xF3n por el clima."
+  - popUpDir: 1
+    text: "\xA1Suena importante! \xBFEn qu\xE9 consiste?"
+  - popUpDir: 0
+    text: " El ODS 13 nos invita a tomar medidas para adaptarnos al cambio clim\xE1tico
+      y mitigar sus efectos. \xA1Con peque\xF1os cambios podemos hacer la diferencia!"
+  - popUpDir: 1
+    text: "\xA1Claro! Y todos tenemos que comprometernos!"
+  - popUpDir: 0
+    text: "Exactamente. \xA1Juntos podemos construir un mundo m\xE1s justo, equitativo
+      y sustentable!"
   introAnim: {fileID: 32900000, guid: 4c050549d609a0940957d54ace992cfe, type: 3}

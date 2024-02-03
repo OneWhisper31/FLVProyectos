@@ -15,7 +15,24 @@ MonoBehaviour:
   type: 1
   dialoges:
   - popUpDir: 0
-    text: mmm
+    text: "\xA1Hola, Amira! \xBFSab\xEDas que hay un Objetivo de Desarrollo Sostenible
+      que se ocupa especialmente de la energ\xEDa?"
+  - popUpDir: 1
+    text: "\xA1S\xED, o\xED hablar de eso! \xBFEs el ODS 7, Energ\xEDa asequible
+      y no contaminante, verdad?"
   - popUpDir: 0
-    text: seeee
+    text: "\xA1Exacto! El ODS 7 propone garantizar el acceso a una energ\xEDa limpia
+      suficiente y segura para todos. \xBFSabes algo al respecto?"
+  - popUpDir: 1
+    text: "\xA1Definitivamente! La energ\xEDa es esencial en nuestra vida y para
+      los sistemas productivos de los pa\xEDses."
+  - popUpDir: 0
+    text: "Amira, \xBFTenes idea por qu\xE9 es importante el acceso a una energ\xEDa
+      asequible y no contaminante?"
+  - popUpDir: 1
+    text: "Creo que tiene que ver con asegurarnos de que todos tengan acceso a la
+      energ\xEDa que necesitan, pero que no da\xF1e al planeta, \xBFVerdad?"
+  - popUpDir: 0
+    text: "\xA1Exacto! Buscamos una energ\xEDa que no solo sea accesible para todos,
+      sino tambi\xE9n respetuosa con el ambiente."
   introAnim: {fileID: 32900000, guid: f438d4305de35b744981c2a83f2d2b0d, type: 3}

@@ -24,7 +24,7 @@ public class PointsSystem : MonoBehaviour
     IEnumerator _EndGame()
     {
         foreach (var button in buttons)
-            button.Interacteable = false;
+            button.Deactivated();
 
         yield return new WaitForSeconds(2);
 

@@ -13,13 +13,55 @@ MonoBehaviour:
   m_Name: ODS13
   m_EditorClassIdentifier: 
   questions:
-  - question: buenasss
+  - question: "\xBFC\xF3mo podemos ayudar a reducir la huella de carbono?"
     answers:
-    - text: :0
+    - text: "Utilizar bolsas de pl\xE1stico desechables."
+      isTrue: 0
+    - text: "Tomar duchas largas todos los d\xEDas."
+      isTrue: 0
+    - text: "Usar transporte p\xFAblico en lugar de conducir un autom\xF3vil."
       isTrue: 1
-    - text: 'o:'
+  - question: "\xBFCu\xE1l de los siguientes h\xE1bitos contribuye a la conservaci\xF3n
+      de energ\xEDa en el hogar?"
+    answers:
+    - text: "Desenchufar los electrodom\xE9sticos cuando no est\xE1n en uso."
+      isTrue: 1
+    - text: "Usar aire acondicionado en 18\xB0."
       isTrue: 0
-    - text: 'o:'
+    - text: "Lavar la ropa cada vez que me ba\xF1o."
       isTrue: 0
-    - text: 'o:'
+  - question: "\xBFC\xF3mo pod\xE9s contribuir a la protecci\xF3n de la biodiversidad
+      y la conservaci\xF3n de los ecosistemas?"
+    answers:
+    - text: Hacer una fogata en un espacio verde.
       isTrue: 0
+    - text: Alimentar a animales silvestres.
+      isTrue: 0
+    - text: Investigar y plantar especies nativas.
+      isTrue: 1
+  - question: "\xBFQu\xE9 acci\xF3n pod\xE9s tomar para reducir la cantidad de residuos
+      pl\xE1sticos en el ambiente?"
+    answers:
+    - text: "Comprar productos envasados en pl\xE1stico de un solo uso"
+      isTrue: 0
+    - text: "Usar botellas de agua de pl\xE1stico desechables"
+      isTrue: 0
+    - text: Reducir, reutilizar y reciclar.
+      isTrue: 1
+  - question: "\xBFCu\xE1l es la principal fuente de emisi\xF3n de los GEI que producen
+      el cambio clim\xE1tico?"
+    answers:
+    - text: "Ganader\xEDa"
+      isTrue: 0
+    - text: "La obtenci\xF3n de energ\xEDa."
+      isTrue: 1
+    - text: Transporte
+      isTrue: 0
+  - question: "\xBFSabes qu\xE9 efectos tiene el cambio clim\xE1tico en nuestro planeta?"
+    answers:
+    - text: "Tormentas severas y sequ\xEDas"
+      isTrue: 0
+    - text: "Desaparici\xF3n de especies"
+      isTrue: 0
+    - text: Ambas son correctas
+      isTrue: 1
