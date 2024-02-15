@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 
 public class OptionsPanel : MonoBehaviour
 {
+    public Transform playTransform;
+
     Building buildingSelected;
     public Building CurrentBuilding { get => buildingSelected; }
 
@@ -44,9 +46,14 @@ public class OptionsPanel : MonoBehaviour
     }
     public void DisableOptions()
     {
-        GameManager.Instance.pauseMode = false;
         buildingSelected = null;
         transform.DOScale(0, 0.7f);
+        playTransform.DOScale(1, 0.7f);
+    }
+    public void PlayButton()
+    {
+        playTransform.DOScale(0, 0.5f).OnComplete(()=>
+        GameManager.Instance.pauseMode = false);
     }
     public void ChangeValue(Change value)
     {

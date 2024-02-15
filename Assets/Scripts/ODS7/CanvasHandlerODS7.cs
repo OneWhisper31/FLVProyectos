@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class CanvasHandlerODS7 : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CanvasHandlerODS7 : MonoBehaviour
     public Animator UIAnim;
     public GameObject positiveTitle, neutralTitle, negativeTitle,loseTitle;
     public GameObject positiveText, neutralText, negativeText,loseText;
+    public Transform gridTransform;
 
     private void Start()
     {
@@ -17,24 +19,36 @@ public class CanvasHandlerODS7 : MonoBehaviour
     }
     public void EndPositive(TypeOfEnergy type)
     {
-        if (type == TypeOfEnergy.Solar)
-            animator.SetTrigger("SolarPositiva");
-        else
-            animator.SetTrigger("EolicaPositiva");
+        gridTransform.DOMoveY(700, 1f).OnComplete(() =>
+        {
+
+            if (type == TypeOfEnergy.Solar)
+                animator.SetTrigger("SolarPositiva");
+            else
+                animator.SetTrigger("EolicaPositiva");
+        });
     }
     public void EndNeutral(TypeOfEnergy type)
     {
-        if (type == TypeOfEnergy.Solar)
-            animator.SetTrigger("SolarNeutra");
-        else
-            animator.SetTrigger("EolicaNeutra");
+        gridTransform.DOMoveY(700, 1f).OnComplete(() =>
+        {
+
+            if (type == TypeOfEnergy.Solar)
+                animator.SetTrigger("SolarNeutra");
+            else
+                animator.SetTrigger("EolicaNeutra");
+        });
     }
     public void EndNegative(TypeOfEnergy type)
     {
-        if (type == TypeOfEnergy.Petroleo)
-            animator.SetTrigger("Petroleo");
-        else
-            animator.SetTrigger("Gas");
+        gridTransform.DOMoveY(700, 1f).OnComplete(() =>
+        {
+
+            if (type == TypeOfEnergy.Petroleo)
+                animator.SetTrigger("Petroleo");
+            else
+                animator.SetTrigger("Gas");
+        });
     }
     public void EndPositiveUI()
     {//llamado por evento del animator padre para desplegar el final de la animacion

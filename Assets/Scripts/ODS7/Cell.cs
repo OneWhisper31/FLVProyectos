@@ -102,6 +102,22 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         isGivingPower = false;
         Debug.Log("intento dar energia");
 
+        if (this == grid.LastCell)
+        {
+            Debug.Log("Ganaste");
+            grid.StopEnergy();
+
+            if (grid.IsEnergyRenovable)
+            {
+                if (grid.HasPoweredAllBateries)
+                    canvasHandler.EndPositive(grid.TypeOfEnergy);
+                else
+                    canvasHandler.EndNeutral(grid.TypeOfEnergy);
+            }
+            else
+                canvasHandler.EndNegative(grid.TypeOfEnergy);
+        }
+
         //si tiene que dar energia y no tiene vecinos que pregunte si hay otro que este dando energia(si no periste)
         if (neighborhood.Length <= 0 && !grid.CellsAnyGivingEnergy)
         {
@@ -114,22 +130,6 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         foreach (var item in neighborhood)
         {
             Debug.Log("di energia a " + item.Item1.name);
-
-            if (item.Item1 == grid.LastCell)
-            {
-                Debug.Log("Ganaste");
-                grid.StopEnergy();
-
-                if (grid.IsEnergyRenovable)
-                {
-                    if(grid.HasPoweredAllBateries)
-                        canvasHandler.EndPositive(grid.TypeOfEnergy);
-                    else
-                        canvasHandler.EndNeutral(grid.TypeOfEnergy);
-                }
-                else
-                    canvasHandler.EndNegative(grid.TypeOfEnergy);
-            }
 
             item.Item1.GetPowered(item.Item2);
         }

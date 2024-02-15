@@ -50,7 +50,7 @@ public class Building : InteractuableObject
         switch (_value)
         {
             case Change.Positive1:
-                value = 1;
+                value = 2;
                 newSprite= structureSelected.positive1.sprite;
                 break;
             case Change.Positive2:
@@ -64,7 +64,7 @@ public class Building : InteractuableObject
             default:
                 break;
         }
-        GameManager.Instance.canvasHandler.UpdateTemperature(-0.05f * value);
+        GameManager.Instance.canvasHandler.UpdateTemperature(-0.1f * value);
         GameManager.Instance.DelayReRollStructure(this, 10);
 
         transform.DOScale(0, 0.2f).OnComplete(()=> {

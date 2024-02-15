@@ -4,18 +4,17 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
-using System;
 
 public class CanvasHandler : MonoBehaviour
 {
     [Header("Years variables")]
     [SerializeField] int yearsInitial=2023;
     [SerializeField] int yearsFinal = 2030;
-    [SerializeField] int gametimeSeconds = 300;
+    [SerializeField] float gametimeSeconds = 300;
     [SerializeField] TextMeshProUGUI years;
     [SerializeField] Slider yearsSlider;
 
-    int secondsPerYear;
+    float secondsPerYear;
     int currentYear;
     float currentTime;
 
@@ -39,14 +38,17 @@ public class CanvasHandler : MonoBehaviour
         secondsPerYear = gametimeSeconds / (yearsFinal - yearsInitial);
         currentYear = yearsInitial;
         years.text = currentYear+"";
+
+        //updateGEI
+        StartCoroutine(UpdateGei());
     }
     private void Update()
     {
         if (GameManager.Instance.pauseMode)
             return;
 
+        //years
         currentTime += Time.deltaTime;
-
         if (currentTime >= secondsPerYear)
         {
             if (currentYear < yearsFinal)
@@ -54,13 +56,16 @@ public class CanvasHandler : MonoBehaviour
             else
                 EndGame();
         }
+
+        //temperature
+        UpdateTemperature(0.00005f);
     }
     public void UpdateYears()
     {
         if (onFinish) return;
 
         currentYear++;
-        currentTime = 0;
+        currentTime -= secondsPerYear;
         years.text = currentYear + "";
         //Debug.Log((float)(currentYear - yearsInitial) / (yearsFinal - yearsInitial));
         yearsSlider.value = (float)(currentYear - yearsInitial) / (yearsFinal - yearsInitial);//deltaYearsPasados-deltayears
@@ -99,14 +104,24 @@ public class CanvasHandler : MonoBehaviour
     }
     public void UpdateTemperature(float number)
     {
-        int numberGei = 0;
-        int.TryParse(gei.text, out numberGei);
-
-        gei.text = ""+ Mathf.Clamp(Mathf.CeilToInt(numberGei + number * 20),0,99);
         temperature.value = Mathf.Clamp(number + temperature.value, 0, 1);
 
         var ozonoColor = ozono.color;
         ozonoColor.a = Mathf.Clamp(number + temperature.value, 0.2f, 1);
         ozono.color = ozonoColor;
+    }
+    IEnumerator UpdateGei()
+    {
+        int numberGei = 0;
+        int.TryParse(gei.text, out numberGei);
+        while (true)
+        {
+            if (GameManager.Instance.pauseMode)
+                yield return new WaitUntil(() => GameManager.Instance.pauseMode);
+
+            numberGei = Mathf.Clamp((int)Random.Range(numberGei*0.5f, numberGei * 1.5f),0,99);
+            gei.text = "" + numberGei;
+            yield return new WaitForSeconds(5f);
+        }
     }
 }
