@@ -35,6 +35,8 @@ public class Trivia : MonoBehaviour
     public void Initialize()
     {
         questions = new List<Questions>(triviaSO[(int)typeODS].questions);
+        izqCharacter.sprite = triviaSO[(int)typeODS].izq;
+        derCharacter.sprite = triviaSO[(int)typeODS].der;
         SetNewQuestion();
     }
 

@@ -12,7 +12,7 @@ public class CanvasHandlerODS4 : MonoBehaviour
     [SerializeField] Animator anim;
 
     public string positiveTitle, neutralTitle;
-    [TextArea] public string positiveMessage, neutralMessage;
+    [TextArea] public string positiveMessage, neutralMessage, positiveFinal, neutralFinal;
 
 
     public void EndGame(string structures = "")
@@ -20,12 +20,16 @@ public class CanvasHandlerODS4 : MonoBehaviour
         if (structures == "")
         {
             title.text = positiveTitle;
-            text.text = positiveMessage;
+            text.text = positiveMessage
+                + "\n \n" +
+                positiveFinal;
         }
         else
         {
             title.text = neutralTitle;
-            text.text = neutralMessage + structures;
+            text.text = neutralMessage + structures
+                + "\n \n" +
+                neutralFinal;
         }
         anim.SetTrigger("Enter");
     }

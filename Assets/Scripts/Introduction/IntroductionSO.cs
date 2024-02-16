@@ -9,6 +9,9 @@ public class IntroductionSO : ScriptableObject
 {
     public ODSType type;
 
+    public Sprite izq;
+    public Sprite der;
+
     public List<Dialoge> dialoges;
 
     public VideoClip introAnim; 

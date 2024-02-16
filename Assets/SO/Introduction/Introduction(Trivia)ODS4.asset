@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Introduction(Trivia)ODS4
   m_EditorClassIdentifier: 
   type: 0
+  izq: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
+  der: {fileID: 21300000, guid: 79a12daa89800ff48832f048647d9347, type: 3}
   dialoges:
   - popUpDir: 0
     text: "\xBFC\xF3mo podemos seguir promoviendo una educaci\xF3n de calidad?"

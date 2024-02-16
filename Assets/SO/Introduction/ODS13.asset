@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: ODS13
   m_EditorClassIdentifier: 
   type: 2
+  izq: {fileID: 21300000, guid: 5711cd2244f9a5345afd17ec8dfc76c7, type: 3}
+  der: {fileID: 21300000, guid: 18c9e01c7b0cce247b91b1725eb55a94, type: 3}
   dialoges:
   - popUpDir: 0
-    text: "\xA1Hola, Amira! \xBFEscuchaste hablar de los Objetivos de Desarrollo
+    text: "\xA1Hola, Tikal! \xBFEscuchaste hablar de los Objetivos de Desarrollo
       Sostenible(ODS)?"
   - popUpDir: 1
     text: "\xA1S\xED, claro! Son objetivos que acordaron muchos pa\xEDses del mundo

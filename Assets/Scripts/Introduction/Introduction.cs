@@ -38,6 +38,8 @@ public class Introduction : MonoBehaviour
     private void Initialize()
     {
         dialoges = new List<Dialoge>(introSO[(int)typeODS].dialoges);
+        izqCharacter.sprite = introSO[(int)typeODS].izq;
+        derCharacter.sprite = introSO[(int)typeODS].der;
     }
 
     public void LoadScene(){

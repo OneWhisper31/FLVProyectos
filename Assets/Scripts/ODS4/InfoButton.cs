@@ -14,7 +14,7 @@ public class InfoButton : InteractuableObject
     string description;
 
     [HideInInspector]public Transform descriptionTextArea;
-    TextMeshProUGUI textObj;
+    public TextMeshProUGUI textObj;
 
     int _level = 1;//max level2(level3)
     public int level {get=>_level;
@@ -33,7 +33,6 @@ public class InfoButton : InteractuableObject
     private void Start()
     {
         descriptionTextArea = GetComponentInChildren<RawImage>().transform;
-        textObj = GetComponentInChildren<TextMeshProUGUI>();
 
         textObj.text = description;
         descriptionTextArea.localScale = Vector3.zero;
@@ -67,14 +66,14 @@ public class InfoButton : InteractuableObject
         StopAllCoroutines();
 
 
-        if (pointsSystem.points >= 710 && level <= 3)
+        if (pointsSystem.points >= 710*level && level <= 3)
         {
-            pointsSystem.points -= 710;
+            pointsSystem.points -= 710* level;
             level++;
             OnClick?.Invoke();
         }
 
-        if (pointsSystem.points <= 700)
+        if (pointsSystem.points < 710)
         {
             pointsSystem.EndGame();
         }

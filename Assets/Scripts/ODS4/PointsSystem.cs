@@ -40,7 +40,8 @@ public class PointsSystem : MonoBehaviour
 
             //saca la ultima coma y agrega una Y y le pone el sobrante del texto
             int lastcommaPos = structures.LastIndexOf(",");
-            structures = structures.Substring(0, lastcommaPos) + " Y" + structures.Substring(lastcommaPos + 1);
+            if(lastcommaPos!=-1)
+                structures = structures.Substring(0, lastcommaPos) + " Y" + structures.Substring(lastcommaPos + 1);
 
             canvasHandler.EndGame(structures);
         }
