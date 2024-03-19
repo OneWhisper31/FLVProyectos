@@ -104,6 +104,10 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
 
         if (this == grid.LastCell)
         {
+            if (canvasHandler.hasUI)
+                return;
+            canvasHandler.hasUI = true;
+
             Debug.Log("Ganaste");
             grid.StopEnergy();
 
@@ -121,6 +125,10 @@ public class Cell : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IP
         //si tiene que dar energia y no tiene vecinos que pregunte si hay otro que este dando energia(si no periste)
         if (neighborhood.Length <= 0 && !grid.CellsAnyGivingEnergy)
         {
+            if (canvasHandler.hasUI)
+                return;
+            canvasHandler.hasUI = true;
+
             Debug.Log("Perdiste");
             grid.StopEnergy();
             canvasHandler.EndLoseUI();

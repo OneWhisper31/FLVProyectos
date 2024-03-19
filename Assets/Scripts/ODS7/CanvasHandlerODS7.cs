@@ -12,6 +12,7 @@ public class CanvasHandlerODS7 : MonoBehaviour
     public GameObject positiveTitle, neutralTitle, negativeTitle,loseTitle;
     public GameObject positiveText, neutralText, negativeText,loseText;
     public Transform gridTransform;
+    public bool hasUI;
 
     private void Start()
     {
