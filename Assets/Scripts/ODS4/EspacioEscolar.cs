@@ -11,18 +11,37 @@ public class EspacioEscolar : MonoBehaviour
     public ODS4Buildings[] levelsImage;//tienen que ocuparse en orden
 
     //nivel 1 significa que no aumento nada y nivel 4 siginifica que la categoria esta al max
-    public int CurrentLevel { get => 4 - levelsImage.Length; }
+    public int currentLevel;
 
     public void LevelUpCategory()
     {
-        var firstLevelImage = levelsImage.First();
+        if (currentLevel >= levelsImage.Length)
+            return;
+
+        StopAllCoroutines();
+        var firstLevelImage = levelsImage[currentLevel];
 
         if (firstLevelImage.fadeType == 0)
             StartCoroutine(FadeIn(firstLevelImage.image));
         else
             StartCoroutine(FadeOut(firstLevelImage.image));
 
-        levelsImage = levelsImage.Skip(1).ToArray();
+        currentLevel++;
+    }
+    public void LevelDownCategory()
+    {
+        if (currentLevel < 0)
+            return;
+
+        StopAllCoroutines();
+        currentLevel--;
+        var current = levelsImage[currentLevel];
+
+        if (current.fadeType == 0)
+            StartCoroutine(FadeOut(current.image));
+        else
+            StartCoroutine(FadeIn(current.image));
+
     }
 
     IEnumerator FadeOut(Image image)

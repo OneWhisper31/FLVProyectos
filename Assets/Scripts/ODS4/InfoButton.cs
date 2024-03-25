@@ -16,12 +16,11 @@ public class InfoButton : InteractuableObject
     [HideInInspector]public Transform descriptionTextArea;
     public TextMeshProUGUI textObj;
 
-    int _level = 1;//max level2(level3)
+    int _level = 0;//max level2(level3)
     public int level {get=>_level;
-        set { 
-            float _value = Mathf.Clamp01(value); 
-            levelSlider.fillAmount += _value / 3; 
-            _level += (int)_value; 
+        set {
+            levelSlider.fillAmount = value / 3f; 
+            _level = value; 
         } 
     }
 
@@ -29,6 +28,7 @@ public class InfoButton : InteractuableObject
     [SerializeField] PointsSystem pointsSystem;
 
     public UnityEvent OnClick;
+    public UnityEvent OnLeftClick;
 
     private void Start()
     {
@@ -65,18 +65,31 @@ public class InfoButton : InteractuableObject
         base.OnPointerClick(eventData);
         StopAllCoroutines();
 
-
-        if (pointsSystem.points >= 710*level && level <= 3)
+        if(eventData.button == PointerEventData.InputButton.Left)
         {
-            pointsSystem.points -= 710* level;
-            level++;
-            OnClick?.Invoke();
+            if (pointsSystem.points >= 710 * level && level < 3)
+            {
+                pointsSystem.points -= 710 * level;
+                level++;
+                OnClick?.Invoke();
+            }
+
+            if (pointsSystem.points < 710)
+            {
+                pointsSystem.EndGame();
+            }
+        }
+        else if (pointsSystem.numberOfGoingBack > 0 && eventData.button == PointerEventData.InputButton.Right)
+        {
+            if (level > 0)
+            {
+                pointsSystem.points += 710 * level;
+                level--;
+                OnLeftClick?.Invoke();
+                pointsSystem.numberOfGoingBack--;
+            }
         }
 
-        if (pointsSystem.points < 710)
-        {
-            pointsSystem.EndGame();
-        }
     }
     public void Deactivated()
     {

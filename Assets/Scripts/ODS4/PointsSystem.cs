@@ -6,6 +6,9 @@ using System.Linq;
 
 public class PointsSystem : MonoBehaviour
 {
+    public int numberOfGoingBack;
+
+
     [SerializeField] int _points;
     public int points { get=> _points; set { pointsText.text = value+""; _points = value; } }
 

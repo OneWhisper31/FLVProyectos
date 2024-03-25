@@ -13,6 +13,7 @@ public class GridODS7 : MonoBehaviour
     [SerializeField] GameObject cell;
     [SerializeField] Transform pivot;
 
+
     public Cell[] cells { get; private set; }
     public Cell LastCell { get => width - 1 + 1 * width < cells.Length ? cells[width - 1 + 1 * width] : null; }
     public bool CellsAnyGivingEnergy { get => cells.Any(x => x.isGivingPower); }
@@ -24,6 +25,8 @@ public class GridODS7 : MonoBehaviour
     public bool IsEnergyRenovable { get => GameManagerODS7.gm.energyChoose.energy.EnergySO.isRenovable; }
     public TypeOfEnergy TypeOfEnergy { get => GameManagerODS7.gm.energyChoose.energy.EnergySO.typeOfEnergy; }
 
+    [Header("Speed UI")]
+    [SerializeField] DefaultButton[] defaultButtons;
     //public Sprite hideTubeSprite;
 
 
@@ -190,4 +193,17 @@ public class GridODS7 : MonoBehaviour
         ||(_cell.pos.Item2 != cells[index].pos.Item2&& _cell.pos.Item1 == cells[index].pos.Item1));
 
 
+
+    //speed ui funciones
+    public void InteractuableHandler(int x,bool choosenState)
+    {
+        for (int i = 0; i < defaultButtons.Length; i++)
+        {
+            if (i == x) defaultButtons[i].Interacteable = choosenState;
+            else defaultButtons[i].Interacteable = !choosenState;
+        }
+    }
+    public void DisableAllExcept(int x) => InteractuableHandler(x,true);
+    public void EnableAllExcept(int x) => InteractuableHandler(x, false);
+    public void DisableAll() { foreach (var item in defaultButtons) item.Interacteable = false; } 
 }

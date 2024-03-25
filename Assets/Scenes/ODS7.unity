@@ -2951,6 +2951,11 @@ MonoBehaviour:
   pivot: {fileID: 1114702241}
   maxBatteries: 3
   batteriesPowered: 0
+  defaultButtons:
+  - {fileID: 1560640031}
+  - {fileID: 2143264167}
+  - {fileID: 1890348475}
+  - {fileID: 1902975597}
 --- !u!114 &1484298651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3394,6 +3399,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameManagerODS7, Assembly-CSharp
         m_MethodName: SetCellSpeed
         m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 50
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1484298650}
+        m_TargetAssemblyTypeName: GridODS7, Assembly-CSharp
+        m_MethodName: DisableAll
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3934,7 +3951,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  initialInteractable: 1
+      - m_Target: {fileID: 1484298650}
+        m_TargetAssemblyTypeName: GridODS7, Assembly-CSharp
+        m_MethodName: EnableAllExcept
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  initialInteractable: 0
   initialDisableAnims: 0
   initialScaleAnims: 0
 --- !u!114 &1890348476
@@ -4039,6 +4068,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1484298650}
+        m_TargetAssemblyTypeName: GridODS7, Assembly-CSharp
+        m_MethodName: EnableAllExcept
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 5
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4717,6 +4758,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0.1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1484298650}
+        m_TargetAssemblyTypeName: GridODS7, Assembly-CSharp
+        m_MethodName: EnableAllExcept
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0.1
           m_StringArgument: 
           m_BoolArgument: 0
