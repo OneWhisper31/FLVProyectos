@@ -653,8 +653,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -63.000027}
-  m_SizeDelta: {x: 1291.075, y: 296.561}
+  m_AnchoredPosition: {x: 711.9999, y: -62.1}
+  m_SizeDelta: {x: 392.3, y: 132.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499885521
 MonoBehaviour:
@@ -1123,8 +1123,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 7.9563}
-  m_SizeDelta: {x: 1026.0453, y: 157.9198}
+  m_AnchoredPosition: {x: 0, y: 3.2}
+  m_SizeDelta: {x: 286.9, y: 63.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769559746
 MonoBehaviour:
@@ -1148,8 +1148,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xA1CORRECTO!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
-  m_sharedMaterial: {fileID: 6883945059828259780, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1173,8 +1173,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 36
+  m_fontSize: 41.1
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
@@ -1352,14 +1352,14 @@ MonoBehaviour:
   - {fileID: 952846528}
   - {fileID: 451713442}
   - {fileID: 101066098}
+  singGood: {fileID: 1885621570}
+  singBad: {fileID: 499885519}
   triviaObj: {fileID: 8555562126625599130}
   button: {fileID: 833173172}
   triviaQuestion: {fileID: 7986625730508304719}
   triviaAnswer1: {fileID: 386428370}
   triviaAnswer2: {fileID: 2146441564}
   triviaAnswer3: {fileID: 753411545}
-  singGood: {fileID: 1885621570}
-  singBad: {fileID: 499885519}
   trivia: {fileID: 8555562126625599131}
 --- !u!224 &952846528 stripped
 RectTransform:
@@ -1663,8 +1663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -63.000027}
-  m_SizeDelta: {x: 1291.075, y: 296.561}
+  m_AnchoredPosition: {x: 712, y: -62.1}
+  m_SizeDelta: {x: 392.3, y: 132.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1885621572
 MonoBehaviour:
@@ -1872,8 +1872,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 7.9563}
-  m_SizeDelta: {x: 1026.0453, y: 157.9198}
+  m_AnchoredPosition: {x: 0, y: 3.2}
+  m_SizeDelta: {x: 286.9, y: 63.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006267777
 MonoBehaviour:
@@ -1895,12 +1895,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mmm,  Incorrecto.
-
-    Volvelo a pensar.'
+  m_text: "\xA1INCORRECTO!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
-  m_sharedMaterial: {fileID: 6883945059828259780, guid: fb1bd890ae89c9a46abca556719dd256, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1924,8 +1922,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.75
-  m_fontSizeBase: 36
+  m_fontSize: 35.35
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18

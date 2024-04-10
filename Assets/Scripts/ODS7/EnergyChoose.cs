@@ -11,6 +11,7 @@ public class EnergyChoose : MonoBehaviour
 
     public Energy energy;
     public Image selectorImage;
+    public Image car;
     public Transform gridPivot;
     public Canvas canvasGrid;
 
@@ -41,6 +42,7 @@ public class EnergyChoose : MonoBehaviour
     {
         index = Mathf.Clamp(_index,0, energies.Length-1);
         selectorImage.sprite = energies[index].initialSprite;
+        car.sprite = energies[index].car;
         energy.EnergySO = energies[index];
     }
     public void AddSelectedEnergy()=>

@@ -68,6 +68,37 @@ public class Trivia : MonoBehaviour
 
         SetButtonsInteract(false);
 
+        var isCorrect = currentQuestion.answers[index].isTrue;
+        float answerPos = 0;
+
+        //marca la respuesta correcta y busca la altura del boton
+        switch (index)
+        {
+            case 0:
+                answerButton0.image.color = Color.white;
+                answerPos = answerButton0.transform.position.y;
+                break;
+            case 1:
+                answerButton1.image.color = Color.white;
+                answerPos = answerButton1.transform.position.y;
+                break;
+            case 2:
+                answerButton2.image.color = Color.white;
+                answerPos = answerButton2.transform.position.y;
+                break;
+
+            default:
+                break;
+        }
+
+        //pone la altura buscada
+        if (isCorrect)
+            triviaAnim.singGood.position =
+                new Vector3(triviaAnim.singGood.position.x, answerPos, triviaAnim.singGood.position.z);
+        else
+            triviaAnim.singBad.position =
+                new Vector3(triviaAnim.singBad.position.x, answerPos, triviaAnim.singBad.position.z);
+
         triviaAnim.NextQuestionAnim(currentQuestion.answers[index].isTrue);
     }
     public void SetButtonsInteract(bool value)

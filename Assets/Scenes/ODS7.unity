@@ -694,7 +694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4a6af462a61bf1e41b3f0a45683fe190, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc73a6dac58e8e34098cae17fa30ee02, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1225,6 +1225,7 @@ MonoBehaviour:
   index: 0
   energy: {fileID: 1529934373}
   selectorImage: {fileID: 1387870137}
+  car: {fileID: 396785262}
   gridPivot: {fileID: 1114702241}
   canvasGrid: {fileID: 1484298653}
   EnergyGameplay: {fileID: 1529934369}
@@ -3313,7 +3314,7 @@ Animator:
   m_GameObject: {fileID: 1529934368}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 51255c5a4959d5c4296729eee5fa5e92, type: 2}
+  m_Controller: {fileID: 9100000, guid: b9593233860dc0b44a1272b287a698cd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -8,7 +8,8 @@ public class TriviaAnimHandler : MonoBehaviour
     [SerializeField] Introduction introduction;
     [SerializeField] Transform[] introductionElements;
 
-    [SerializeField] Transform triviaObj,button,triviaQuestion,triviaAnswer1, triviaAnswer2, triviaAnswer3,singGood,singBad;
+    public Transform singGood, singBad;
+    [SerializeField] Transform triviaObj,button,triviaQuestion,triviaAnswer1, triviaAnswer2, triviaAnswer3;
 
     [SerializeField] Trivia trivia;
 
@@ -60,7 +61,7 @@ public class TriviaAnimHandler : MonoBehaviour
             yield break;
         }
 
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(5f);
         singGood.DOScale(0, 0.5f);
         singBad.DOScale(0, 0.5f);
         yield return new WaitForSecondsRealtime(1f);

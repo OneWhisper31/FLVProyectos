@@ -210,6 +210,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1032178433}
     m_Modifications:
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 859
+      objectReference: {fileID: 0}
     - target: {fileID: 321234542785823842, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -422,6 +438,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 693
+      objectReference: {fileID: 0}
     - target: {fileID: 3406847478668623718, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Name
       value: EspacioEscolar - Docentes
@@ -573,6 +605,22 @@ PrefabInstance:
     - target: {fileID: 9187807556343307692, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -371
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 696
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1082,6 +1130,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1032178433}
     m_Modifications:
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 890
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 165
+      objectReference: {fileID: 0}
     - target: {fileID: 321234542785823842, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1254,6 +1318,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -259
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 215.04
+      objectReference: {fileID: 0}
     - target: {fileID: 3406847478668623718, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Name
       value: EspacioEscolar - Inclusion
@@ -1389,6 +1469,22 @@ PrefabInstance:
     - target: {fileID: 9187807556343307692, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -6960,6 +7056,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1032178433}
     m_Modifications:
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -573
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 896
+      objectReference: {fileID: 0}
     - target: {fileID: 321234542785823842, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7148,6 +7260,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 758
       objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -755
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 753
+      objectReference: {fileID: 0}
     - target: {fileID: 3406847478668623718, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Name
       value: EspacioEscolar - Vinculos Escolares
@@ -7276,6 +7404,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 758.2363
       objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -894
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 672
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7289,6 +7433,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1032178433}
     m_Modifications:
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -34
+      objectReference: {fileID: 0}
     - target: {fileID: 321234542785823842, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7417,6 +7577,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 147.68
       objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 164
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 113
+      objectReference: {fileID: 0}
     - target: {fileID: 2786333202668920423, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -7528,6 +7704,22 @@ PrefabInstance:
     - target: {fileID: 9187807556343307692, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -138
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -8695,6 +8887,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1032178433}
     m_Modifications:
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 523
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 46
+      objectReference: {fileID: 0}
     - target: {fileID: 321234542785823842, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8839,6 +9047,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 32.515778
       objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -690
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 107
+      objectReference: {fileID: 0}
     - target: {fileID: 3406847478668623718, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Name
       value: EspacioEscolar - Educacion ambiental
@@ -8974,6 +9198,22 @@ PrefabInstance:
     - target: {fileID: 9187807556343307692, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10216,6 +10456,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1032178433}
     m_Modifications:
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 414
+      objectReference: {fileID: 0}
+    - target: {fileID: 40630470207942877, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 321234542785823842, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10352,6 +10608,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 344.21692
       objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 207
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676841323867680089, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 407
+      objectReference: {fileID: 0}
     - target: {fileID: 3406847478668623718, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_Name
       value: EspacioEscolar - Actividades
@@ -10463,6 +10735,22 @@ PrefabInstance:
     - target: {fileID: 9187807556343307692, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 346
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -522
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205330534231679812, guid: af2cd0b1b2a053d44a24954567203de7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 348
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

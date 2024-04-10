@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Petroleo
   m_EditorClassIdentifier: 
   animator: {fileID: 9100000, guid: 26ae79095277ff547b000fc55c525df8, type: 2}
-  initialSprite: {fileID: 21300000, guid: 117d72634e50ec0488ea3d81f8f93284, type: 3}
+  initialSprite: {fileID: 21300000, guid: 149ef539189bc8d4394b2704a490ab1d, type: 3}
+  car: {fileID: 21300000, guid: bded223423efce3498f00a511250b9f0, type: 3}
   isRenovable: 0
   typeOfEnergy: 1

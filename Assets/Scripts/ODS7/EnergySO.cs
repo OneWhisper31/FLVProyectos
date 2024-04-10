@@ -7,9 +7,9 @@ public class EnergySO : ScriptableObject
 {
     public RuntimeAnimatorController animator;
     public Sprite initialSprite;
+    public Sprite car;
     public bool isRenovable;
     public TypeOfEnergy typeOfEnergy;
-    
 }
 
 

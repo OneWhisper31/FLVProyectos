@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 9100000, guid: b9593233860dc0b44a1272b287a698cd, type: 2}
   initialSprite: {fileID: 21300000, guid: 9645ae2f830ca4e40a1dfc152f44ec8d, type: 3}
+  car: {fileID: 21300000, guid: dc73a6dac58e8e34098cae17fa30ee02, type: 3}
   isRenovable: 1
   typeOfEnergy: 2
